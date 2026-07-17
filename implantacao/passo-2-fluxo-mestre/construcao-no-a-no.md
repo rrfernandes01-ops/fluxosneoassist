@@ -78,7 +78,7 @@ Validar formato de CPF (revalidar 1 vez em caso de erro; na 2ª falha, oferecer 
 Lista interativa WhatsApp:
 1. Comprei no site ftw.com.br
 2. Quero comprar / conhecer os produtos
-3. Comprei em marketplace (Mercado Livre, Amazon…)
+3. Comprei em marketplace (Mercado Livre, Amazon, Shopee, Magalu, TikTok Shop…)
 4. Comprei em loja física
 5. Sou farmácia ou drogaria
 6. Sou lojista / revenda (outros canais)
