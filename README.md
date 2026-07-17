@@ -44,6 +44,8 @@ docs/
 
 ## Como implantar na NeoAssist
 
+> **Pacote pronto para colar**: o diretório [`implantacao/`](implantacao/00-guia-de-implantacao.md) contém os artefatos finais de cada passo — artigos da base de conhecimento redigidos, fluxo mestre nó a nó com os textos exatos, prompts de configuração dos 9 agentes e checklists de integrações e filas. Comece pelo [guia de implantação](implantacao/00-guia-de-implantacao.md).
+
 1. **Base de conhecimento**: cadastre o conteúdo de `01-identidade-e-regras-gerais.md` e `04-guardrails-globais-compliance.md` como artigos-base vinculados a todos os agentes da Núb.ia Resolve.
 2. **Fluxo de automação**: monte o fluxo de entrada do WhatsApp conforme `02-fluxo-mestre-triagem.md` (boas-vindas → identificação via integração de consumidor → consentimento LGPD → menu de triagem → roteamento).
 3. **Agentes**: crie um agente Núb.ia Resolve por perfil (A1 a A9), copiando de cada documento as seções *Persona*, *Escopo*, *Proibições*, *Guardrails* e *Fluxo conversacional*.
