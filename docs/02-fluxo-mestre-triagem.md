@@ -98,7 +98,7 @@ Se a intenção não ficou clara na pergunta aberta, apresentar o menu de triage
 >
 > 1. Comprei no site ftw.com.br
 > 2. Quero comprar / conhecer os produtos
-> 3. Comprei em marketplace (Mercado Livre, Amazon…)
+> 3. Comprei em marketplace (Mercado Livre, Amazon, Shopee, Magalu, TikTok Shop…)
 > 4. Comprei em loja física
 > 5. Sou farmácia ou drogaria (SP)
 > 6. Sou lojista / revenda (outros canais)

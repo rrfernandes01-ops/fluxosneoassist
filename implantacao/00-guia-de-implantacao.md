@@ -14,7 +14,7 @@ Este diretório contém os artefatos **prontos para colar** na plataforma NeoAss
 
 | Passo | O quê | Onde na NeoAssist | Artefatos |
 |-------|-------|-------------------|-----------|
-| 1 | Base de conhecimento | Base de conhecimento → novos artigos | `passo-1-base-conhecimento/` (4 artigos) |
+| 1 | Base de conhecimento | Base de conhecimento → novos artigos | `passo-1-base-conhecimento/` (5 artigos) |
 | 2 | Fluxo mestre | Automações → novo fluxo no canal WhatsApp | `passo-2-fluxo-mestre/construcao-no-a-no.md` |
 | 3 | Agentes de IA | Núb.ia Resolve → criar 9 agentes | `passo-3-agentes/prompt-A1.md` … `prompt-A9.md` |
 | 4 | Integrações | Integrações / APIs | `passo-4-integracoes/checklist-integracoes.md` |
@@ -23,14 +23,15 @@ Este diretório contém os artefatos **prontos para colar** na plataforma NeoAss
 ## Regras de montagem
 
 1. **Passo 1 antes do 3**: os agentes só respondem com base nos artigos oficiais; sem base publicada, os agentes devem ficar em rascunho.
-2. **Vincule os 4 artigos do passo 1 a TODOS os 9 agentes** (são a camada comum de comportamento).
+2. **Vincule os artigos 01–04 do passo 1 a TODOS os 9 agentes** (são a camada comum de comportamento). O **artigo 05 (Regras de tratativa por marketplace)** é vinculado ao agente **A3** (e opcionalmente ao A1, para redirecionamentos corretos).
 3. **Passo 2 e 3 juntos**: o fluxo mestre termina em hand-off para os agentes; crie os agentes primeiro em rascunho, monte o fluxo, depois publique tudo junto.
 4. **Passo 4 é incremental**: cada integração conectada substitui o comportamento de contingência correspondente (documentado em `../docs/03-integracoes.md`). O fluxo funciona desde o dia 1 apenas com I-01/I-02/I-03; sem elas, use as contingências.
 5. **Passo 5 antes de publicar**: nenhum agente publicado sem sua fila de transbordo criada — transferência nunca é negada.
 
 ## Checklist de publicação (go-live)
 
-- [ ] 4 artigos publicados e vinculados aos 9 agentes.
+- [ ] Artigos 01–04 publicados e vinculados aos 9 agentes; artigo 05 vinculado ao A3.
+- [ ] Passo a passo de cada marketplace do artigo 05 validado nos apps/sites oficiais (nomes de botões e prazos mudam — item permanente da curadoria).
 - [ ] 9 agentes criados com os prompts do passo 3, cada um com fila de transbordo vinculada.
 - [ ] Fluxo mestre publicado no canal WhatsApp com os 9 hand-offs + ramo de exceção.
 - [ ] Placeholders substituídos: `[Assistente de IA Fitoway]`, `[LINK_CONSENTIMENTO]`.

@@ -36,7 +36,7 @@ Vale para **qualquer conversa sobre produto**, em qualquer agente:
 |--------|-------------------------------|
 | A1 — Cliente Site FTW | CDC e-commerce: Decreto 7.962/2013 (Lei do E-commerce) — informações claras de fornecedor, atendimento facilitado, direito de arrependimento |
 | A2 — Prospect Consumidor | CDC arts. 30–31 e 36–37 (oferta e publicidade); ANVISA (alegações); CONAR |
-| A3 — Cliente Marketplace | CDC (responsabilidade solidária da cadeia de fornecimento); políticas de cada marketplace — tratativa de pedido ocorre prioritariamente no canal do marketplace |
+| A3 — Cliente Marketplace | CDC (responsabilidade solidária da cadeia de fornecimento); regras próprias de cada marketplace (Mercado Livre, Amazon, Shopee, Magalu, TikTok Shop) — mesmo em loja oficial, a comercialização e a tratativa do pedido são de responsabilidade da plataforma; comunicar isso com delicadeza, como benefício de rapidez, respeitando a temperatura do cliente (base: artigo "Regras de tratativa por marketplace") |
 | A4 — Cliente PDV | CDC art. 18 (vício do produto — troca também pelo comerciante); orientação sem desautorizar o lojista |
 | A5 — B2B Farma SP | Relação B2B regida pelo Código Civil (não CDC, salvo destinatário final); ANVISA — boas práticas de distribuição; sigilo comercial de tabelas/margens; validação de CNPJ e CNAE farma |
 | A6 — B2B Nacional | Idem A5, por segmento (alimentar: RDC 275; varejo/BodyShop/canal verde: rotulagem e alegações); política comercial por canal é confidencial até validação do cadastro |
