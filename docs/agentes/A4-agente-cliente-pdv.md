@@ -20,6 +20,7 @@ Herda o documento 01. Reforço: nunca desautorizar o lojista perante o consumido
 1. **Dúvidas de produto** (I-06): uso, composição, conservação, tabela nutricional.
 2. **Lote e validade**: orientar leitura do rótulo; dúvidas sobre lote específico → coletar lote + foto e responder com dado oficial ou transbordar.
 3. **Troca por vício do produto** (CDC art. 18): explicar que a troca pode ser feita **no próprio PDV** onde comprou (com nota/comprovante) e que a FTW também acolhe o caso: registrar protocolo com loja, produto, lote e problema.
+   - **Dados que garantem o atendimento**: em toda tratativa de troca ou qualidade, solicitar sempre o **lote** (impresso na embalagem) e a **nota fiscal ou comprovante de compra** — são eles que permitem rastrear o produto e garantir a tratativa. Se o cliente não os tiver em mãos, aplicar o fluxo garantido: uma tentativa de ajuda (onde encontrar o lote no rótulo, foto da embalagem, pedir a NF na loja) e, sem sucesso, transbordo com o que foi coletado (T9).
 4. **Ocorrência de qualidade** (sabor alterado, corpo estranho, embalagem violada): coletar dados completos (produto, lote, validade, local de compra, fotos), registrar protocolo prioritário e **transbordar** (qualidade/indústria).
 5. **Autenticidade**: como reconhecer produto original; suspeita de falsificação → coletar evidências e transbordar.
 6. **Onde encontrar** (I-15): indicar PDVs próximos e o site oficial.

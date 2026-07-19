@@ -23,15 +23,16 @@
 ### N03 — Mensagem: boas-vindas (bloco 2)
 > Estou aqui para te ajudar de forma rápida.
 
-### N04 — Integração I-01: consumidor por telefone
-Entrada `{{telefone}}` → preenche `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{consentimento_ok}}`.
-**Contingência (I-01 indisponível/erro)**: seguir pelo ramo "não encontrado".
+### N04 — Integração `[[INT_CONSUMIDOR]]` (I-01): consumidor por telefone
+Entrada `{{telefone}}` → preenche `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{consentimento_ok}}`, `{{identidade_validada}}`.
+**Contingência (integração indisponível/erro)**: seguir pelo ramo "não encontrado".
 
 ### N05 — Condição: consumidor encontrado?
 - **Sim** → N06. **Não** → N10.
 
-### N06 — Integração I-02: últimos protocolos
+### N06 — Integrações `[[INT_HISTORICO]]` + `[[INT_PROTOCOLOS]]` (I-02): histórico e protocolos abertos/fechados
 **Contingência**: pular para N09.
+**Identificação persistente**: se `{{identidade_validada}}` = sim, nenhum nó posterior (nem os agentes) pede identificação de novo — o atendimento segue mostrando que já sabe com quem fala. Se o histórico trouxer solução disponível (ex.: pedido saiu para entrega, troca aprovada), o agente a apresenta proativamente na abertura.
 
 ### N07 — Condição: existe protocolo em aberto?
 - **Sim** → N08. **Não** → N09.
@@ -114,4 +115,6 @@ Roteia para A1–A9 passando: `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{prot
 > Antes de eu encerrar: a solução que te apresentei resolveu o problema?
   - Sim → agradecer e encerrar. Não → oferecer transbordo imediatamente.
 - **Troca de perfil no meio da conversa**: hand-off interno ao agente correto levando o resumo — o usuário não repete nada.
+- **Identificação persistente**: identidade validada uma única vez (telefone, CPF ou CNPJ) fica gravada no cadastro (`{{identidade_validada}}`); em qualquer retorno, nenhum agente repete a identificação positiva — cumprimenta pelo nome e conduz. Confirmação adicional só em divergência de identidade ou operação sensível (documento 01, seção 6.1).
+- **Placeholders de integração**: os conectores são referenciados como `[[INT_*]]` (mapa no documento 03, seção 1.1); substituir pelos conectores reais conforme as documentações forem chegando.
 - **Sem resposta de integração (T9 — vale em qualquer nó e em todos os agentes)**: dado não localizado, integração indisponível ou cliente sem o dado em mãos → uma única tentativa de ajudar (onde encontrar o dado / busca por dado alternativo) e, sem sucesso, transbordo calmo e transparente com tudo o que já foi coletado. Nunca encerrar por falta de dado nem repetir a mesma coleta.

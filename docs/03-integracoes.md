@@ -7,7 +7,7 @@
 | ID | Integração | Uso no fluxo | Agentes | Prioridade |
 |----|------------|--------------|---------|------------|
 | I-01 | **NeoAssist — consumidor por telefone** | Identificar se o contato já existe na base ao entrar no canal | Fluxo mestre | P0 (essencial) |
-| I-02 | **NeoAssist — histórico de protocolos** | Ler os últimos protocolos e preparar o contexto do atendimento | Fluxo mestre, todos | P0 |
+| I-02 | **NeoAssist — histórico e protocolos** | Ler o histórico de atendimentos anteriores e os protocolos **abertos e fechados**, preparando o contexto e permitindo apresentar soluções proativamente | Fluxo mestre, todos | P0 |
 | I-03 | **Consentimento LGPD** | Enviar link do termo e registrar aceite (data/hora + versão) | Fluxo mestre | P0 |
 | I-04 | **E-commerce FTW (plataforma do site)** | Status de pedido, itens, pagamento, NF, trocas/devoluções | A1, A2 | P0 |
 | I-05 | **Logística / transportadora (rastreio)** | Rastreamento de entrega em tempo real e previsão de entrega | A1, A5, A6 | P0 |
@@ -21,6 +21,29 @@
 | I-13 | **Pagamentos (gateway do site)** | Status de pagamento, reenvio de boleto/Pix (sem dados de cartão) | A1 | P2 |
 | I-14 | **Agenda de visitas / distribuidor** | Agendar visita de representante para lead B2B qualificado | A5, A6 | P2 |
 | I-15 | **Localizador de PDVs / lojas oficiais** | Indicar ponto de venda ou loja oficial de marketplace mais próxima | A2, A4 | P2 |
+
+## 1.1 Placeholders de integração (substituíveis)
+
+As documentações técnicas das integrações ainda serão fornecidas. Até lá, **todo o projeto (documentos e prompts dos agentes) referencia cada integração por um placeholder padronizado**, no formato `[[INT_*]]`. Quando a documentação real de uma integração chegar: (1) atualizar o contrato dela neste documento; (2) substituir o placeholder pelo conector real na plataforma NeoAssist; (3) desativar a contingência correspondente; (4) rodar os testes de aceitação (incluindo o T9 com a integração desligada).
+
+| Placeholder | Integração (ID) | O que executa |
+|-------------|-----------------|---------------|
+| `[[INT_CONSUMIDOR]]` | I-01 | Integração de consumidores: busca do cadastro por telefone, CPF ou CNPJ |
+| `[[INT_HISTORICO]]` | I-02 | Leitura do histórico de atendimentos anteriores |
+| `[[INT_PROTOCOLOS]]` | I-02 | Leitura de protocolos anteriores, fechados ou abertos |
+| `[[INT_CONSENTIMENTO]]` | I-03 | Registro do consentimento LGPD |
+| `[[INT_ERP_B2C]]` | I-04 | Leitura do ERP/e-commerce B2C: pedidos, pagamento, NF, trocas |
+| `[[INT_RASTREIO]]` | I-05 | Rastreamento de entregas |
+| `[[INT_CATALOGO]]` | I-06 | Catálogo, fichas oficiais, preço e estoque |
+| `[[INT_ERP_B2B]]` | I-07 | Leitura do ERP B2B (JL FIT e FTW): pedidos, faturamento, títulos, tabelas |
+| `[[INT_CRM_B2B]]` | I-08 | CRM comercial B2B: leads e carteiras |
+| `[[INT_REPRESENTANTES]]` | I-09 | Base de representantes: validação de vínculo |
+| `[[INT_PARCEIROS]]` | I-11 | Base de parceiros profissionais (CRM/CRN) |
+| `[[INT_AFILIADOS]]` | I-10 | Base/plataforma de influenciadores e afiliados |
+| `[[INT_CNPJ]]` | I-12 | Consulta e validação de CNPJ |
+| `[[INT_PAGAMENTOS]]` | I-13 | Gateway de pagamentos B2C |
+| `[[INT_AGENDA]]` | I-14 | Agenda de visitas de representantes |
+| `[[INT_PDV]]` | I-15 | Localizador de PDVs e lojas oficiais |
 
 ## 2. Contratos esperados (resumo funcional)
 

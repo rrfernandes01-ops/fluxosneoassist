@@ -63,6 +63,7 @@ Em paralelo à saudação, o fluxo consulta a **integração de consumidor da Ne
 > Vi aqui que seu último contato foi sobre [assunto do protocolo]. Quer continuar esse assunto ou falar de algo novo?
 
 4. Se o perfil do cliente já é conhecido (ex.: cliente B2B Farma SP), rotear direto para o agente do perfil, sem menu.
+5. **Identificação persistente (documento 01, seção 6.1)**: cliente já identificado (telefone, CPF ou CNPJ validados em qualquer contato anterior) **nunca passa de novo pela identificação positiva** — o fluxo entrega ao agente a identidade confirmada e o agente conduz mostrando que sabe com quem fala. Se o histórico/protocolos indicarem solução disponível (ex.: pedido saiu para entrega, troca aprovada), **apresentá-la proativamente** já na abertura.
 
 ### 3.2 Cliente NÃO encontrado na base
 
