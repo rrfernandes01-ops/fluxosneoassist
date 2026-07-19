@@ -27,6 +27,8 @@ Este diretório contém os artefatos **prontos para colar** na plataforma NeoAss
 3. **Passo 2 e 3 juntos**: o fluxo mestre termina em hand-off para os agentes; crie os agentes primeiro em rascunho, monte o fluxo, depois publique tudo junto.
 4. **Passo 4 é incremental**: cada integração conectada substitui o comportamento de contingência correspondente (documentado em `../docs/03-integracoes.md`). O fluxo funciona desde o dia 1 apenas com I-01/I-02/I-03; sem elas, use as contingências.
 5. **Passo 5 antes de publicar**: nenhum agente publicado sem sua fila de transbordo criada — transferência nunca é negada.
+6. **Placeholders de integração `[[INT_*]]`**: os prompts e o fluxo referenciam as integrações por placeholders padronizados (mapa em `../docs/03-integracoes.md`, seção 1.1). Quando a documentação real de cada integração chegar: atualizar o contrato no doc 03 → substituir o placeholder pelo conector real na plataforma → desativar a contingência → rodar os testes (incluindo T9 com a integração desligada). Nenhum outro texto do projeto precisa mudar.
+7. **Identificação única e persistente**: configurar o cadastro do contato com os campos `identidade_validada` (com data) e `perfil`; identidade validada uma vez (telefone, CPF ou CNPJ) nunca é pedida de novo — os agentes cumprimentam pelo nome e conduzem pelo histórico (documento 01, seção 6.1).
 
 ## Checklist de publicação (go-live)
 
@@ -37,5 +39,6 @@ Este diretório contém os artefatos **prontos para colar** na plataforma NeoAss
 - [ ] Placeholders substituídos: `[Assistente de IA Fitoway]`, `[LINK_CONSENTIMENTO]`.
 - [ ] Horário de atendimento configurado: seg–sex 9h–18h, calendário de feriados nacionais + cidade de São Paulo.
 - [ ] Teste ponta a ponta com número não cadastrado (fluxo de cadastro + LGPD) e com número cadastrado (continuidade de protocolo).
+- [ ] Teste de identificação persistente: retornar com contato já identificado → o agente cumprimenta pelo nome sem pedir identificação de novo e, havendo protocolo/solução no histórico, apresenta proativamente.
 - [ ] Teste de cada gatilho de transbordo (T1–T9 — `../docs/05-transbordo-humano-e-filas.md`), incluindo o T9: consulta sem resposta da integração ou cliente sem o dado em mãos → transbordo com as informações coletadas.
 - [ ] Piloto com % reduzida de tráfego antes de 100%.

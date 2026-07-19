@@ -1,6 +1,6 @@
 # Passo 4 — Checklist de conexão das integrações
 
-> Contratos completos e regras de uso em `../../docs/03-integracoes.md`. O fluxo funciona desde o dia 1 com as contingências; cada integração conectada substitui a contingência correspondente. Conectar na ordem de prioridade.
+> Contratos completos, regras de uso e o **mapa de placeholders `[[INT_*]]`** em `../../docs/03-integracoes.md`. O fluxo funciona desde o dia 1 com as contingências; cada integração conectada substitui a contingência correspondente. Conectar na ordem de prioridade. As documentações técnicas das integrações ainda serão fornecidas — ao chegar cada uma: atualizar o contrato no doc 03, substituir o placeholder pelo conector real na plataforma e rodar os testes de aceitação.
 
 ## Onda 1 — P0 (necessárias para o go-live pleno)
 
