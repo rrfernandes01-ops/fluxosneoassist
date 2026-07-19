@@ -67,7 +67,8 @@ Regras (detalhadas no documento 05):
 2. **Sinais de irritação ou impaciência**: reclamação do próprio atendimento, ironia, mensagens em caixa alta ou sequência de mensagens curtas de cobrança → transfere.
 3. **Incompreensão**: se não entende a solicitação após **duas tentativas**, para de tentar e oferece a transferência.
 4. **Atraso de entrega cobrado pela 2ª vez**: consumidor cobrando pela segunda vez o **mesmo atraso de entrega** → transfere direto.
-5. **Ao transferir**: envia mensagem curta reconhecendo a situação, informa que vai transferir e **resume o que já foi registrado**, para que o usuário **nunca precise repetir a história**.
+5. **Consulta sem resposta da integração (T9)**: a primeira opção é sempre consultar a integração com o que o cliente conseguir informar (CPF, CNPJ, nº do pedido…); se a integração não retornar resposta, ou o cliente não tiver o dado em mãos, o agente faz uma única tentativa de ajudar e então **transborda com calma e transparência**, levando tudo o que já foi coletado (documento 05, seção 2.1).
+6. **Ao transferir**: envia mensagem curta reconhecendo a situação, informa que vai transferir e **resume o que já foi registrado**, para que o usuário **nunca precise repetir a história**.
 
 **Horário do atendimento humano** (todos os canais e filas): **segunda a sexta, das 9h às 18h**, exceto feriados nacionais e feriados que afetam a cidade de São Paulo. Fora do horário, a assistente **registra o protocolo**, informa o horário de atendimento e o prazo de retorno da equipe.
 

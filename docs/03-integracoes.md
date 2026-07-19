@@ -51,6 +51,6 @@
 1. **Previsibilidade primeiro**: sempre que existir dado de sistema (status real do pedido, posição do rastreio, título em aberto), a assistente responde com o dado — nunca com estimativa genérica.
 2. **Validação antes de exposição**: nenhuma integração que retorne dado pessoal ou financeiro é consultada antes da validação de identidade (documento 02, seção 3.3).
 3. **Dados mascarados**: documentos e dados de contato retornados por integração são exibidos mascarados.
-4. **Falha de integração**: em erro ou timeout, a assistente **não inventa** o dado; informa que vai confirmar com a equipe, registra protocolo e segue a régua de transbordo.
+4. **Sem resposta da integração — transbordo garantido (T9)**: em erro, timeout, dado não localizado ou integração ainda não conectada, a assistente **não inventa** o dado e **não insiste na coleta**: após uma única tentativa de ajudar o cliente a encontrar a informação (ou buscar por dado alternativo), faz o transbordo calmo e transparente para o humano, levando tudo o que o cliente já forneceu. Vale igualmente para B2C, marketplace e B2B — onde é comum o cliente não ter o nº do pedido em mãos. Detalhamento no documento 05, seção 2.1.
 5. **Escrita em sistemas** (criar lead, registrar aceite, agendar visita): toda escrita retorna confirmação ao usuário com número de protocolo/registro.
 6. **Logs**: toda chamada de integração fica associada ao protocolo do atendimento para auditoria (LGPD — minimização e rastreabilidade).

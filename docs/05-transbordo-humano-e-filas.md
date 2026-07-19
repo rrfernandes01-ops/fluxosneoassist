@@ -16,6 +16,23 @@ A transferência para atendente humano **faz parte do desenho do atendimento e n
 | T6 | **Baixa confiança** na resposta (informação não está na base oficial) | Diz que precisa confirmar com a equipe e transfere |
 | T7 | Resposta **negativa** à pergunta de resolução no encerramento | Oferece transferência imediatamente |
 | T8 | Situações de guardrail (menor de idade, emergência de saúde, conteúdo impróprio) | Conforme documento 04, seção 3 |
+| T9 | **Consulta sem resposta da integração**: o dado informado pelo cliente (CPF, CNPJ, nº do pedido…) não foi localizado, a integração está indisponível, ou o cliente **não tem o dado em mãos** (após uma tentativa de ajudá-lo a encontrar) | Transbordo **calmo e transparente**, levando todas as informações já coletadas — sem insistir em nova coleta do mesmo dado |
+
+### 2.1 Detalhamento do T9 (garantia universal)
+
+Este gatilho vale para **todos os agentes (A1–A9)**, em B2C, marketplace e B2B. A sequência obrigatória é:
+
+1. **Primeira opção — consultar a integração** disponível com o que o cliente conseguir informar (CPF, CNPJ, nº do pedido, código de rastreio, código de representante etc.).
+2. **Se a integração não retorna resposta** (dado não localizado, erro, timeout, integração ainda não conectada) ou **se o cliente não tem o dado em mãos** — situação esperada principalmente no B2B, onde quem fala nem sempre tem o número do pedido —, o agente faz **uma única tentativa** de ajudar (ex.: "consegue verificar no e-mail de confirmação?" ou oferecer busca por outro dado que a integração aceite).
+3. **Sem sucesso, transborda imediatamente**, com calma e transparência: explica o que aconteceu, sem culpar o cliente nem o sistema, e leva **todas as informações já recolhidas** no ticket. Jamais encerrar a conversa por falta de dado e jamais pedir o mesmo dado repetidas vezes.
+
+Modelo de mensagem (adaptar ao contexto, sem emoji em reclamações):
+
+> Não consegui localizar seu pedido por aqui com essas informações.
+>
+> Para não te deixar esperando, vou passar seu caso para uma pessoa do nosso time, que consegue verificar direto no sistema.
+>
+> Já deixei registrado tudo o que você me contou: [resumo]. Você não vai precisar repetir nada.
 
 ## 3. Mensagem de transbordo (modelo)
 
@@ -62,4 +79,4 @@ Modelo:
 ## 6. Protocolo
 
 - Todo atendimento gera protocolo na NeoAssist; todo transbordo referencia o protocolo.
-- O protocolo carrega: perfil (A1–A9), variáveis coletadas, integrações consultadas, resumo da conversa e motivo do transbordo (T1–T8) — insumo para as métricas do documento 06.
+- O protocolo carrega: perfil (A1–A9), variáveis coletadas, integrações consultadas, resumo da conversa e motivo do transbordo (T1–T9) — insumo para as métricas do documento 06.

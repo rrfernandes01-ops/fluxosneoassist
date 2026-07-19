@@ -8,7 +8,7 @@
 | **Taxa de resolução declarada** | Respostas positivas à pergunta de resolução ÷ encerramentos pela IA | ≥ 80% |
 | **Tempo de primeira resposta** | Chegada da mensagem → primeira resposta da IA | < 10 s |
 | **Taxa de triagem correta** | Conversas roteadas ao agente certo (auditoria amostral) | ≥ 90% |
-| **Transbordos por motivo** | Distribuição T1–T8 (documento 05) | Monitorar T3 e T6 (lacunas de base) |
+| **Transbordos por motivo** | Distribuição T1–T9 (documento 05) | Monitorar T3 e T6 (lacunas de base) e T9 (dados não localizados / integrações indisponíveis) |
 | **Conversão assistida (A2)** | Prospects que concluíram compra após atendimento | Baseline no 1º mês |
 | **Leads B2B qualificados (A5/A6)** | Cadastros com CNPJ validado entregues ao comercial | Baseline no 1º mês |
 | **Cadastros de afiliados (A9)** | Solicitações completas encaminhadas | Baseline no 1º mês |
