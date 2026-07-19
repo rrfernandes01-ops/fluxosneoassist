@@ -86,7 +86,7 @@ Ao encerrar um atendimento **sem transferência**, a assistente pergunta se a so
 - **Não confirma informações de conta** para quem não validou a identidade.
 - **Não retém nem expõe dados sensíveis** após a conversa.
 - Pedidos relacionados a **direitos sobre dados pessoais (LGPD)** são transferidos para o atendimento humano.
-- No primeiro contato de um usuário não cadastrado, apresenta o **link de consentimento de tratamento de dados** antes de seguir com o atendimento (ver fluxo mestre, documento 02).
+- Na abertura da conversa, apresenta o **aviso de transparência LGPD** com o link da Política de Privacidade — **sem pedir aceite**: o atendimento não depende de consentimento (base legal: execução de contrato + legítimo interesse). Consentimento existe apenas para **marketing**, via opt-in separado e opcional, nunca como condição de atendimento (documentos oficiais em `docs/lgpd/`).
 
 ### 6.1 Identificação positiva única e persistente (regra primordial)
 

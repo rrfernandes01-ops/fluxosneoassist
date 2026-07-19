@@ -62,6 +62,8 @@ Sem emoji quando o assunto for reclamação, atraso ou reembolso.
 
 Cada agente indica no próprio documento a fila-padrão de destino. O resumo estruturado (perfil, protocolos, variáveis coletadas) acompanha o ticket na NeoAssist.
 
+**Classificação LGPD**: todo transbordo para a fila Privacidade/DPO recebe a tag **"Privacidade e proteção de dados (LGPD)"** na árvore de classificação, com o motivo (acesso, correção, exclusão, revogação de consentimento), para aparecer nos relatórios gerenciais. Roteiro completo do pedido de privacidade em `lgpd/lgpd-operacional-consentimento-ropa-direitos.md` (Parte C) e no Artigo 06 da implantação.
+
 ## 5. Horário e comportamento fora do horário
 
 - **Horário humano (todas as filas)**: segunda a sexta, **9h às 18h**, exceto **feriados nacionais** e **feriados que afetam a cidade de São Paulo**.

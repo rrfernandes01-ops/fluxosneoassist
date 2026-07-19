@@ -23,6 +23,12 @@
 ### N03 — Mensagem: boas-vindas (bloco 2)
 > Estou aqui para te ajudar de forma rápida.
 
+### N03-B — Mensagem: transparência LGPD (obrigatória, sem pedir aceite)
+Enviada na abertura, junto da saudação, **para todos** (cadastrados ou não). Registrar a exibição em log (data/hora) via `[[INT_CONSENTIMENTO]]`.
+> Antes de começarmos, um aviso rápido: para te atender, a gente trata os seus dados conforme a nossa Política de Privacidade, que você lê aqui: [LINK_CONSENTIMENTO]. Você pode falar com um atendente humano quando quiser e pedir informações sobre os seus dados a qualquer momento.
+
+**Importante**: o atendimento **não depende de consentimento** (base legal: execução de contrato, art. 7, V + legítimo interesse, art. 7, IX). Este nó apenas informa — **não há pergunta de aceite nem bloqueio**. Consentimento só existe para marketing (N21).
+
 ### N04 — Integração `[[INT_CONSUMIDOR]]` (I-01): consumidor por telefone
 Entrada `{{telefone}}` → preenche `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{consentimento_ok}}`, `{{identidade_validada}}`.
 **Contingência (integração indisponível/erro)**: seguir pelo ramo "não encontrado".
@@ -61,15 +67,8 @@ Validar formato de CPF (revalidar 1 vez em caso de erro; na 2ª falha, oferecer 
 ### N12 — Mensagem: conveniência do cadastro
 > Prontinho. Sempre que você falar com a gente por este mesmo número, não vai precisar confirmar seus dados de novo.
 
-### N13 — Mensagem + entrada: consentimento LGPD (I-03)
-> Antes de seguir: a gente cuida dos seus dados conforme a LGPD. Aqui está o termo de consentimento para você conferir e aceitar: [LINK_CONSENTIMENTO]
->
-> Posso continuar?
-
-- **Aceite** → registrar via I-03 (data/hora + versão do termo) → N15.
-- **Recusa** →
-> Sem o consentimento eu não consigo seguir com o atendimento automático, mas posso te passar para uma pessoa do nosso time. Quer que eu transfira?
-  - Sim → transbordo (fila Consumidor). Não → encerrar cordialmente.
+### N13 — Prosseguir após cadastro (sem gate de consentimento)
+A transparência LGPD já foi dada no N03-B — **não repetir aviso nem pedir aceite aqui**. Seguir direto para N15. Se o cliente fizer qualquer pergunta sobre os dados dele, aplicar o roteiro de privacidade do Artigo 06 (registro + classificação LGPD + fila Privacidade/DPO).
 
 ### N14 — (reservado para reentrada de subfluxos)
 
@@ -105,6 +104,12 @@ Lista interativa WhatsApp:
 
 ### N20 — Hand-off: agente Núb.ia Resolve do perfil
 Roteia para A1–A9 passando: `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{protocolo_recente}}`, resumo da triagem.
+
+### N21 — Opt-in de marketing (opcional; somente após atendimento bem resolvido)
+Oferecido **apenas** ao final de um atendimento resolvido (resposta positiva à pergunta de resolução), **nunca como pedágio** e no máximo 1 vez por período definido pela curadoria. Registrar via `[[INT_CONSENTIMENTO]]`: `optin_marketing = sim/nao` + data/hora + versão do aviso vigente.
+> Quer receber por aqui novidades e ofertas exclusivas da FTW? É opcional e você pode sair quando quiser. Responda: 1 para Sim, quero receber; 2 para Não, obrigado.
+
+Opt-out a qualquer momento (SAIR ou equivalente): atualizar `optin_marketing = nao` com data/hora e classificar o protocolo — efeito imediato.
 
 ## Regras transversais (configurar no fluxo/canal)
 
