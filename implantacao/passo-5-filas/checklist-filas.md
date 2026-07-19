@@ -7,7 +7,7 @@
 - [ ] Horário: **segunda a sexta, 9h–18h**.
 - [ ] Calendário de exceções: **feriados nacionais + feriados da cidade de São Paulo**.
 - [ ] Fora do horário: registrar protocolo + mensagem padrão do Artigo 04 (retorno até o fim do próximo dia útil).
-- [ ] Ticket de transbordo recebe automaticamente: perfil (A1–A9), variáveis coletadas, resumo da conversa e motivo (T1–T8).
+- [ ] Ticket de transbordo recebe automaticamente: perfil (A1–A9), variáveis coletadas, resumo da conversa e motivo (T1–T9).
 
 ## Filas a criar
 
@@ -44,4 +44,5 @@
 - [ ] T4: cobrar o mesmo atraso de entrega pela 2ª vez → transferência direta.
 - [ ] T5: citar "Procon" / "advogado" / "LGPD" / "imprensa" → transferência imediata para a fila correta.
 - [ ] T7: responder "não resolveu" à pergunta de encerramento → oferta imediata de transferência.
+- [ ] T9: informar um CPF/nº de pedido inexistente (e também dizer "não tenho o número do pedido") em cada agente com integração → 1 tentativa de ajuda e transbordo calmo com as informações coletadas; testar também com a integração desligada.
 - [ ] Fora do horário: verificar protocolo + mensagem de prazo de retorno.

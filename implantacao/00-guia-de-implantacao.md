@@ -37,5 +37,5 @@ Este diretório contém os artefatos **prontos para colar** na plataforma NeoAss
 - [ ] Placeholders substituídos: `[Assistente de IA Fitoway]`, `[LINK_CONSENTIMENTO]`.
 - [ ] Horário de atendimento configurado: seg–sex 9h–18h, calendário de feriados nacionais + cidade de São Paulo.
 - [ ] Teste ponta a ponta com número não cadastrado (fluxo de cadastro + LGPD) e com número cadastrado (continuidade de protocolo).
-- [ ] Teste de cada gatilho de transbordo (T1–T8 — `../docs/05-transbordo-humano-e-filas.md`).
+- [ ] Teste de cada gatilho de transbordo (T1–T9 — `../docs/05-transbordo-humano-e-filas.md`), incluindo o T9: consulta sem resposta da integração ou cliente sem o dado em mãos → transbordo com as informações coletadas.
 - [ ] Piloto com % reduzida de tráfego antes de 100%.

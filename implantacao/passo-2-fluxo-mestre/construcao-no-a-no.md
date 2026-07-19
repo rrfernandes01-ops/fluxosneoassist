@@ -114,3 +114,4 @@ Roteia para A1–A9 passando: `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{prot
 > Antes de eu encerrar: a solução que te apresentei resolveu o problema?
   - Sim → agradecer e encerrar. Não → oferecer transbordo imediatamente.
 - **Troca de perfil no meio da conversa**: hand-off interno ao agente correto levando o resumo — o usuário não repete nada.
+- **Sem resposta de integração (T9 — vale em qualquer nó e em todos os agentes)**: dado não localizado, integração indisponível ou cliente sem o dado em mãos → uma única tentativa de ajudar (onde encontrar o dado / busca por dado alternativo) e, sem sucesso, transbordo calmo e transparente com tudo o que já foi coletado. Nunca encerrar por falta de dado nem repetir a mesma coleta.
