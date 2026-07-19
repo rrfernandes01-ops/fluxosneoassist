@@ -15,7 +15,7 @@ flowchart TD
 
     LOOKUP -- Não --> CADASTRO[Coletar nome e CPF]
     CADASTRO --> AVISO[Informar: neste mesmo contato\nnão precisará confirmar de novo]
-    AVISO --> LGPD[Apresentar link de consentimento\nde tratamento de dados]
+    AVISO --> LGPD[Aviso de transparência LGPD\nlink da Política — sem pedir aceite]
     LGPD --> TRIAGEM
 
     OPENQ --> NLU{Intenção identificada\ncom confiança?}
@@ -79,13 +79,11 @@ Em paralelo à saudação, o fluxo consulta a **integração de consumidor da Ne
 
 > Prontinho. Sempre que você falar com a gente por este mesmo número, não vai precisar confirmar seus dados de novo.
 
-3. **Apresentar o link de consentimento de tratamento de dados (LGPD)**:
+3. **Aviso de transparência LGPD** (sem pedir aceite — o atendimento **não depende de consentimento**; base legal: execução de contrato, art. 7, V + legítimo interesse, art. 7, IX):
 
-> Antes de seguir: a gente cuida dos seus dados conforme a LGPD. Aqui está o termo de consentimento para você conferir e aceitar: [LINK_CONSENTIMENTO]
->
-> Posso continuar?
+> Antes de começarmos, um aviso rápido: para te atender, a gente trata os seus dados conforme a nossa Política de Privacidade, que você lê aqui: [LINK_CONSENTIMENTO]. Você pode falar com um atendente humano quando quiser e pedir informações sobre os seus dados a qualquer momento.
 
-4. Registrar o aceite (data/hora + versão do termo) via integração antes de prosseguir. Se o usuário recusar, explicar que sem o consentimento só é possível atendimento humano e ofertar o transbordo.
+4. Registrar em log a exibição do aviso (data/hora + versão) via integração e **seguir normalmente com o atendimento**. Consentimento existe apenas para **marketing** (opt-in separado, oferecido só ao final de atendimento bem resolvido — nunca como pedágio; regras completas em `docs/lgpd/lgpd-operacional-consentimento-ropa-direitos.md` e no Artigo 06 da implantação).
 
 ### 3.3 Validação de identidade para dados de conta
 

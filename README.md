@@ -30,6 +30,9 @@ docs/
 ├── 04-guardrails-globais-compliance.md   # CDC, LGPD, ANVISA e matriz regulatória por agente
 ├── 05-transbordo-humano-e-filas.md       # Regras de transferência, filas, horários e protocolo
 ├── 06-metricas-e-monitoramento.md        # KPIs, curadoria e melhoria contínua
+├── lgpd/
+│   ├── aviso-de-privacidade-whatsapp-ftw.md              # Texto público (minuta p/ validação jurídica/DPO)
+│   └── lgpd-operacional-consentimento-ropa-direitos.md   # Consentimento, ROPA e direitos do titular
 └── agentes/
     ├── A1-agente-cliente-site-ftw.md
     ├── A2-agente-prospect-consumidor.md
@@ -57,4 +60,5 @@ docs/
 - Briefing "Projeto IA FTW no WhatsApp" (mensagem do solicitante).
 - PDF "Orientações para construção de chatbot com Núb.ia Resolve" (NeoAssist).
 - PDF "Definição da persona da Núb.ia".
+- "Aviso de Privacidade — Atendimento por WhatsApp da FTW" e "LGPD Operacional — consentimento, ROPA e direitos do titular" (`docs/lgpd/`, minutas aguardando validação do jurídico/DPO).
 - Guia NeoAssist — Fluxo de Automações: <https://neoassist.getoutline.com/s/6acb61f6-9250-406a-a50f-2d74e0011738/doc/fluxo-de-automacoes-4ogIYYglMW>

@@ -6,7 +6,7 @@
 
 - [ ] **I-01 — Consumidor por telefone (NeoAssist)**: consulta do cadastro pelo número do WhatsApp. *Sem ela*: todo contato passa pelo subfluxo de cadastro (N10–N13).
 - [ ] **I-02 — Histórico de protocolos (NeoAssist)**: leitura dos últimos protocolos para continuidade. *Sem ela*: pular oferta de continuidade (N06–N08).
-- [ ] **I-03 — Consentimento LGPD**: registro do aceite (data/hora + versão do termo). *Sem ela*: registrar o aceite como nota no protocolo (provisório, priorizar).
+- [ ] **I-03 — Transparência e opt-in LGPD**: log da exibição do aviso de transparência (data/hora + versão) e registro do opt-in/opt-out de marketing (`optin_marketing`). *Sem ela*: registrar como nota/tag no protocolo (provisório, priorizar).
 - [ ] **I-04 — E-commerce FTW**: pedidos, pagamento, NF, trocas. *Sem ela*: A1 coleta nº do pedido + CPF, registra protocolo e transborda.
 - [ ] **I-05 — Rastreio (transportadoras)**: eventos e previsão de entrega. *Sem ela*: informar código e link público da transportadora.
 - [ ] **I-06 — Catálogo de produtos**: fichas, alegações aprovadas, preço e estoque do site. *Sem ela*: A2 direciona ao site; dúvidas técnicas fora da base → transbordo (T6). **Crítica para compliance ANVISA** — priorizar as fichas na base de conhecimento mesmo antes da API.

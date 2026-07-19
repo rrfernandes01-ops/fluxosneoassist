@@ -8,7 +8,7 @@
 |----|------------|--------------|---------|------------|
 | I-01 | **NeoAssist — consumidor por telefone** | Identificar se o contato já existe na base ao entrar no canal | Fluxo mestre | P0 (essencial) |
 | I-02 | **NeoAssist — histórico e protocolos** | Ler o histórico de atendimentos anteriores e os protocolos **abertos e fechados**, preparando o contexto e permitindo apresentar soluções proativamente | Fluxo mestre, todos | P0 |
-| I-03 | **Consentimento LGPD** | Enviar link do termo e registrar aceite (data/hora + versão) | Fluxo mestre | P0 |
+| I-03 | **Transparência e opt-in LGPD** | Registrar em log a exibição do aviso de transparência (data/hora + versão) e gravar o opt-in/opt-out de marketing (`optin_marketing` com data/hora + versão do aviso) | Fluxo mestre | P0 |
 | I-04 | **E-commerce FTW (plataforma do site)** | Status de pedido, itens, pagamento, NF, trocas/devoluções | A1, A2 | P0 |
 | I-05 | **Logística / transportadora (rastreio)** | Rastreamento de entrega em tempo real e previsão de entrega | A1, A5, A6 | P0 |
 | I-06 | **Catálogo de produtos** | Ficha técnica, composição, tabela nutricional, modo de uso, estoque, preço no site | A1, A2, A3, A4, A8 | P0 |
@@ -31,7 +31,7 @@ As documentações técnicas das integrações ainda serão fornecidas. Até lá
 | `[[INT_CONSUMIDOR]]` | I-01 | Integração de consumidores: busca do cadastro por telefone, CPF ou CNPJ |
 | `[[INT_HISTORICO]]` | I-02 | Leitura do histórico de atendimentos anteriores |
 | `[[INT_PROTOCOLOS]]` | I-02 | Leitura de protocolos anteriores, fechados ou abertos |
-| `[[INT_CONSENTIMENTO]]` | I-03 | Registro do consentimento LGPD |
+| `[[INT_CONSENTIMENTO]]` | I-03 | Log do aviso de transparência LGPD e registro do opt-in/opt-out de marketing |
 | `[[INT_ERP_B2C]]` | I-04 | Leitura do ERP/e-commerce B2C: pedidos, pagamento, NF, trocas |
 | `[[INT_RASTREIO]]` | I-05 | Rastreamento de entregas |
 | `[[INT_CATALOGO]]` | I-06 | Catálogo, fichas oficiais, preço e estoque |
