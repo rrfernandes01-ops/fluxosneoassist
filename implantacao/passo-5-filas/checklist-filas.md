@@ -15,6 +15,7 @@
 - [ ] **Financeiro Consumidor** — recebe A1, A3 (reembolso, estorno, pagamento).
 - [ ] **B2B Farma SP** — recebe A5 e A7 (categoria farma SP).
 - [ ] **B2B Nacional** — recebe A6 e A7 (demais canais).
+- [ ] **JL Educa** — recebe A7 (agendamento de treinamentos; o time retorna com a agenda).
 - [ ] **Parcerias Profissionais** — recebe A8.
 - [ ] **Marketing / Afiliados** — recebe A9.
 - [ ] **Privacidade / DPO** — recebe todos (LGPD e direitos de titular).
@@ -31,7 +32,7 @@
 | A4 | Consumidor (qualidade com prioridade) | — |
 | A5 | B2B Farma SP | Cobrança / Crédito |
 | A6 | B2B Nacional | Cobrança / Crédito |
-| A7 | B2B Farma SP ou B2B Nacional (pela categoria) | Gestão comercial (comissões/contrato) |
+| A7 | B2B Farma SP ou B2B Nacional (pela categoria — Atendimento CX) | JL Educa (treinamentos); gestão comercial (comissões/contrato) |
 | A8 | Parcerias Profissionais | — |
 | A9 | Marketing / Afiliados | — |
 | Todos | Privacidade / DPO e Jurídico / Ouvidoria (assuntos restritos, ramo N19) | — |

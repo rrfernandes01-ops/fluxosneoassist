@@ -14,13 +14,14 @@
 | I-06 | **Catálogo de produtos** | Ficha técnica, composição, tabela nutricional, modo de uso, estoque, preço no site | A1, A2, A3, A4, A8 | P0 |
 | I-07 | **ERP / faturamento JL FIT e FTW B2B** | Pedidos B2B, faturamento, títulos, prazos, tabela de preço por canal | A5, A6, A7 | P1 |
 | I-08 | **CRM comercial B2B** | Cadastro de leads B2B, carteira por representante, status de crédito (somente sinalização — negociação é humana) | A5, A6, A7 | P1 |
-| I-09 | **Base de representantes** | Validar vínculo do representante (código, canal, região) | A7 | P1 |
+| I-09 | **Base de representantes** | Validar a identidade do representante — fase 1: **primeiro nome + CPF** confirmados na base (retorna categoria e carteira); fase 2 futura conforme documentação | A7 | P1 |
 | I-10 | **Plataforma de afiliados** | Cadastro de afiliado, status de aprovação, link/cupom, painel de comissões | A9 | P1 |
 | I-11 | **Base de profissionais parceiros** | Cadastro e validação de CRM/CRN, status da parceria | A8 | P1 |
 | I-12 | **Consulta CNPJ (Receita/serviço externo)** | Validar CNPJ e UF na triagem B2B | Fluxo mestre, A5, A6 | P2 |
 | I-13 | **Pagamentos (gateway do site)** | Status de pagamento, reenvio de boleto/Pix (sem dados de cartão) | A1 | P2 |
 | I-14 | **Agenda de visitas / distribuidor** | Agendar visita de representante para lead B2B qualificado | A5, A6 | P2 |
 | I-15 | **Localizador de PDVs / lojas oficiais** | Indicar ponto de venda ou loja oficial de marketplace mais próxima | A2, A4 | P2 |
+| I-16 | **Calendário JL Educa** | Consultar o calendário disponível do time JL Educa para agendamento de treinamentos (futura; até lá, coleta manual + fila JL Educa) | A7 | P2 |
 
 ## 1.1 Placeholders de integração (substituíveis)
 
@@ -44,6 +45,7 @@ As documentações técnicas das integrações ainda serão fornecidas. Até lá
 | `[[INT_PAGAMENTOS]]` | I-13 | Gateway de pagamentos B2C |
 | `[[INT_AGENDA]]` | I-14 | Agenda de visitas de representantes |
 | `[[INT_PDV]]` | I-15 | Localizador de PDVs e lojas oficiais |
+| `[[INT_AGENDA_JLEDUCA]]` | I-16 | Calendário disponível do time JL Educa (treinamentos) |
 
 ## 2. Contratos esperados (resumo funcional)
 

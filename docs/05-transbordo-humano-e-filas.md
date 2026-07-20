@@ -54,6 +54,7 @@ Sem emoji quando o assunto for reclamação, atraso ou reembolso.
 | **Financeiro Consumidor** | A1, A3 | Reembolso, estorno, pagamento |
 | **B2B Farma SP** | A5, A7 | Comercial farma SP (JL FIT) |
 | **B2B Nacional** | A6, A7 | Comercial demais canais |
+| **JL Educa** | A7 | Agendamento de treinamentos da plataforma JL Educa (retorna com a agenda) |
 | **Parcerias Profissionais** | A8 | Médicos, nutricionistas, nutrólogos |
 | **Marketing / Afiliados** | A9 | Influenciadores, programa de afiliados |
 | **Privacidade / DPO** | Todos | LGPD e direitos de titular |
