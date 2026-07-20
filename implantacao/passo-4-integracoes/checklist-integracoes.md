@@ -25,6 +25,7 @@
 - [ ] **I-13 — Pagamentos (gateway)**: status e reenvio de boleto/Pix → A1.
 - [ ] **I-14 — Agenda de visitas**: agendamento de representante → A5, A6.
 - [ ] **I-15 — Localizador de PDVs/lojas oficiais** → A2, A4.
+- [ ] **I-16 — Calendário JL Educa** (`[[INT_AGENDA_JLEDUCA]]`): agenda disponível do time para treinamentos → A7. *Sem ela*: coleta manual (CNPJ, rede ou loja única, nº de pessoas, sugestão presencial/online, observações) + fila JL Educa.
 
 ## Regras ao conectar cada integração
 
