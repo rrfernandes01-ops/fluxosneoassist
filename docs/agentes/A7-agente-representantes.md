@@ -7,7 +7,7 @@
   - **Canal Farma — estado de São Paulo** (JL FIT);
   - **Todos os demais canais — território nacional**.
 - **Gatilho de roteamento**: opção 7 do menu; intenções "sou representante", "minha carteira", "meu pedido de cliente"; perfil A7 gravado.
-- **Filas de transbordo**: Atendimento CX (via fila B2B Farma SP ou B2B Nacional, conforme a categoria); **JL Educa** (treinamentos); comissões/contrato → gestão comercial humana.
+- **Filas de transbordo**: Atendimento CX (via fila B2B Farma SP ou B2B Nacional, conforme a categoria); **JL Educa** (treinamentos); **Trade Marketing** (ações de trade); comissões/contrato → gestão comercial humana.
 
 ## 2. Objetivo
 
@@ -35,6 +35,7 @@ O agente **sempre pergunta qual assunto** o representante deseja tratar:
 > 1. Atendimento do CX
 > 2. Agendamento de treinamento — JL Educa
 > 3. Consultar sua carteira (desempenho, oportunidades e campanhas)
+> 4. Ação de Trade Marketing
 
 ### 5.1 Assunto 1 — Atendimento do CX
 
@@ -86,6 +87,31 @@ Consulta de **desempenho, oportunidades e campanhas** da carteira do representan
 
 **Contingência** (integrações não conectadas): registrar a solicitação com protocolo e transbordar para a fila da categoria (fluxo T9).
 
+### 5.4 Assunto 4 — Ação de Trade Marketing
+
+Solicitação de ação de trade (degustação, evento com presença da FTW, presença VIP ou qualquer outra atividade confirmada com o time de trade) abre um **processo interno no Pipefy** para o time de Trade planejar e executar.
+
+**Contexto crítico**: o problema recorrente é o representante **não munir o time de Trade das informações necessárias**, transformando o canal em "apaga-incêndio". Por isso, neste assunto o agente é **o mais criterioso possível**: confirma todos os pontos, **não registra solicitação incompleta** e explica que a completude é o que garante a execução da ação.
+
+**Checklist obrigatório (coletar e confirmar item a item)**:
+
+| Bloco | Dados |
+|-------|-------|
+| Ação | Tipo (degustação, evento, presença VIP, outra — descrever); objetivo comercial e resultado esperado |
+| Cliente | CNPJ, nome do cliente, comprador e dono/responsável (dossiê padrão do A7) |
+| Local | Endereço completo; tipo de local (loja, **complexo comercial**, evento externo); **contato do responsável no local** (nome e telefone) |
+| Local — se complexo comercial ou evento | Autorização da administração do complexo/organização do evento (quem autoriza, status); regras do espaço (horários permitidos, acesso para carga/descarga, ponto de energia, espaço disponível/mobiliário permitido) |
+| Data | Data e horário propostos + pelo menos uma alternativa |
+| Público | Público estimado e perfil |
+| Produtos | Quais produtos/SKUs, quantidades previstas (ex.: para degustação) |
+| Materiais e equipe | Materiais necessários (stand, balcão, uniforme, brindes); quem executa (promotor local, equipe do trade, o próprio RCA) |
+| Comercial | Acordo/contrapartida comercial envolvida, se houver |
+| Observações | Qualquer informação relevante adicional |
+
+**Fechamento**: confirmar o resumo completo com o representante → registrar protocolo → transbordo para a fila **Trade Marketing**. Deixar claro que **quem confirma, planeja e executa a ação é o time de Trade** — o registro é uma solicitação, não uma aprovação.
+
+**Integração futura — Pipefy (`[[INT_PIPEFY_TRADE]]`, I-17)**: quando conectada, o agente (a) **cria o card** da solicitação direto no pipe de Trade com o checklist completo; (b) **lê a etapa/fase** em que o card está e informa o representante ("sua solicitação está na fase de planejamento"); (c) **ajuda nas confirmações** pendentes da etapa (campos faltantes, aprovações), cobrando do representante exatamente o que o time de Trade precisa. Até lá: coleta manual completa + fila Trade Marketing (contingência padrão).
+
 ## 6. Fora de escopo / proibições
 
 - **Comissões, metas, premiações, contrato de representação, desligamento** → transbordo humano imediato (Lei 4.886/1965).
@@ -113,8 +139,8 @@ Consulta de **desempenho, oportunidades e campanhas** da carteira do representan
 
 ## 9. Integrações utilizadas
 
-`[[INT_REPRESENTANTES]]` (validação nome+CPF), `[[INT_ERP_B2B]]`, `[[INT_CRM_B2B]]`, `[[INT_RASTREIO]]`, `[[INT_CATALOGO]]`, `[[INT_HISTORICO]]`/`[[INT_PROTOCOLOS]]`, `[[INT_AGENDA_JLEDUCA]]` (futura — calendário do time JL Educa). Contingências conforme documento 03.
+`[[INT_REPRESENTANTES]]` (validação nome+CPF), `[[INT_ERP_B2B]]`, `[[INT_CRM_B2B]]`, `[[INT_RASTREIO]]`, `[[INT_CATALOGO]]`, `[[INT_HISTORICO]]`/`[[INT_PROTOCOLOS]]`, `[[INT_AGENDA_JLEDUCA]]` (futura — calendário do time JL Educa), `[[INT_PIPEFY_TRADE]]` (futura — pipe de Trade Marketing: criação de card, leitura de etapa e confirmações). Contingências conforme documento 03.
 
 ## 10. Métricas específicas
 
-Solicitações CX por sub-assunto e completude do dossiê (% com todos os dados obrigatórios); agendamentos JL Educa registrados; consultas de carteira atendidas na IA; SLA de retorno do CX e do JL Educa pós-transbordo.
+Solicitações CX por sub-assunto e completude do dossiê (% com todos os dados obrigatórios); agendamentos JL Educa registrados; consultas de carteira atendidas na IA; **solicitações de Trade com checklist 100% completo** (meta: nenhuma solicitação incompleta chega ao time de Trade); SLA de retorno do CX, JL Educa e Trade pós-transbordo.

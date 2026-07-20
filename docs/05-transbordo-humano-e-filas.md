@@ -20,7 +20,7 @@ A transferência para atendente humano **faz parte do desenho do atendimento e n
 
 ### 2.1 Detalhamento do T9 (garantia universal)
 
-Este gatilho vale para **todos os agentes (A1–A9)**, em B2C, marketplace e B2B. A sequência obrigatória é:
+Este gatilho vale para **todos os agentes (A1–A10)**, em B2C, marketplace e B2B. A sequência obrigatória é:
 
 1. **Primeira opção — consultar a integração** disponível com o que o cliente conseguir informar (CPF, CNPJ, nº do pedido, código de rastreio, código de representante etc.).
 2. **Se a integração não retorna resposta** (dado não localizado, erro, timeout, integração ainda não conectada) ou **se o cliente não tem o dado em mãos** — situação esperada principalmente no B2B, onde quem fala nem sempre tem o número do pedido —, o agente faz **uma única tentativa** de ajudar (ex.: "consegue verificar no e-mail de confirmação?" ou oferecer busca por outro dado que a integração aceite).
@@ -69,6 +69,8 @@ Sem emoji quando o assunto for reclamação, atraso ou reembolso.
 | **B2B Farma SP** | A5, A7 | Comercial farma SP (JL FIT) |
 | **B2B Nacional** | A6, A7 | Comercial demais canais |
 | **JL Educa** | A7 | Agendamento de treinamentos da plataforma JL Educa (retorna com a agenda) |
+| **Trade Marketing** | A7 | Solicitações de ações de trade (degustação, eventos, presença VIP) com checklist completo; processo interno via Pipefy |
+| **Terceirização** | A10 | Leads do serviço de terceirização (nova categoria na NeoAssist) — sequência de atendimento e orçamento |
 | **Parcerias Profissionais** | A8 | Médicos, nutricionistas, nutrólogos |
 | **Marketing / Afiliados** | A9 | Influenciadores, programa de afiliados |
 | **Privacidade / DPO** | Todos | LGPD e direitos de titular |
@@ -96,4 +98,4 @@ Modelo:
 ## 6. Protocolo
 
 - Todo atendimento gera protocolo na NeoAssist; todo transbordo referencia o protocolo.
-- O protocolo carrega: perfil (A1–A9), variáveis coletadas, integrações consultadas, resumo da conversa e motivo do transbordo (T1–T9) — insumo para as métricas do documento 06.
+- O protocolo carrega: perfil (A1–A10), variáveis coletadas, integrações consultadas, resumo da conversa e motivo do transbordo (T1–T9) — insumo para as métricas do documento 06.
