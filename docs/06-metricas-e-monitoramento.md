@@ -24,6 +24,7 @@
 
 - Pico de transbordo T2 (irritação) → possível incidente (atrasos em massa, site fora do ar).
 - Falha recorrente de integração (documento 03, regra 4) → acionar TI; fluxo segue em contingência.
+- **Consultas com timeout ou conversas sem resposta** (silêncio — documento 05, seção 2.2): monitorar volume de timeouts por integração e qualquer conversa encerrada sem mensagem final do agente; ocorrência de silêncio é incidente crítico → acionar TI e revisar o nó do fluxo.
 - Fila humana sem resposta dentro do prazo prometido → alerta ao supervisor (a promessa de retorno é vinculante — CDC).
 
 ## 4. Governança de mudanças
