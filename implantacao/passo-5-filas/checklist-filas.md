@@ -46,4 +46,5 @@
 - [ ] T5: citar "Procon" / "advogado" / "LGPD" / "imprensa" → transferência imediata para a fila correta.
 - [ ] T7: responder "não resolveu" à pergunta de encerramento → oferta imediata de transferência.
 - [ ] T9: informar um CPF/nº de pedido inexistente (e também dizer "não tenho o número do pedido") em cada agente com integração → 1 tentativa de ajuda e transbordo calmo com as informações coletadas; testar também com a integração desligada.
+- [ ] Silêncio zero (doc 05, seção 2.2): simular integração lenta e integração fora do ar → mensagem de espera aos ~5 s, timeout de 10 s + 1 retentativa, posicionamento e transbordo para a fila da categoria; conferir que TODO nó de integração tem ramo de erro/timeout e que nenhuma conversa termina sem resposta do agente.
 - [ ] Fora do horário: verificar protocolo + mensagem de prazo de retorno.

@@ -34,6 +34,20 @@ Modelo de mensagem (adaptar ao contexto, sem emoji em reclamações):
 >
 > Já deixei registrado tudo o que você me contou: [resumo]. Você não vai precisar repetir nada.
 
+### 2.2 Silêncio zero: timeouts e demora de consulta (complemento obrigatório do T9)
+
+Comportamento observado em teste que **nunca pode acontecer**: o agente inicia uma busca (integração, site, documento) e a conversa fica parada, sem resposta. As garantias:
+
+1. **Timeout técnico em toda consulta**: cada chamada de integração tem tempo máximo de **10 segundos**, com **1 retentativa**. Configurar no nó de integração da plataforma; o ramo de erro/timeout é obrigatório em todo nó.
+2. **Mensagem de espera**: se a consulta não retornar em ~5 segundos, o agente envia um posicionamento curto antes de qualquer silêncio:
+> Um instante, estou verificando no sistema.
+3. **Demora persistente = sem resposta**: estourado o timeout (com a retentativa), o agente trata exatamente como "sem resposta da integração": posiciona o cliente com transparência e **transborda para a fila humana da categoria correspondente** com tudo o que já foi coletado — sem nova espera, sem nova tentativa silenciosa.
+> A consulta está demorando mais do que o normal por aqui.
+>
+> Para não te deixar esperando, vou passar seu caso para uma pessoa do nosso time, que verifica direto no sistema. Já deixei tudo registrado: [resumo].
+4. **Sem fontes externas em tempo real**: os agentes **não acessam sites, links ou documentos externos durante a conversa** — nem o site ftw.com.br. Respondem exclusivamente com a base de conhecimento oficial e as integrações conectadas. Conteúdo do site é enviado como **link para o cliente abrir**, nunca consultado ao vivo pelo agente. Informação que só existe no site e não está na base = lacuna de base (T6): posicionar e transbordar, e a curadoria incorpora o conteúdo à base.
+5. **Watchdog do fluxo**: se qualquer etapa da automação deixar de produzir resposta ao cliente por mais de **30 segundos**, o fluxo dispara o fallback automático: mensagem de posicionamento + transbordo T9 para a fila da categoria. Em nenhuma hipótese a conversa termina em silêncio.
+
 ## 3. Mensagem de transbordo (modelo)
 
 Sempre em três partes — reconhecer, informar, resumir:
