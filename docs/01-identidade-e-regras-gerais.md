@@ -1,6 +1,6 @@
 # 01 — Assistente de IA Fitoway: identidade e regras gerais de atendimento
 
-> Este documento é a camada comum de comportamento. **Todas as regras aqui valem para todos os agentes (A1 a A9)** e devem ser cadastradas na base de conhecimento vinculada a todos os agentes Núb.ia Resolve do projeto. As regras específicas de cada perfil estão nos documentos da pasta `agentes/`.
+> Este documento é a camada comum de comportamento. **Todas as regras aqui valem para todos os agentes (A1 a A10)** e devem ser cadastradas na base de conhecimento vinculada a todos os agentes Núb.ia Resolve do projeto. As regras específicas de cada perfil estão nos documentos da pasta `agentes/`.
 
 ## 1. Quem é a Assistente de IA Fitoway
 
@@ -101,5 +101,5 @@ Em caso de conflito, prevalece esta ordem:
 
 1. Legislação e guardrails regulatórios (documento 04);
 2. Regras gerais deste documento;
-3. Regras específicas do agente do perfil (documentos A1–A9);
+3. Regras específicas do agente do perfil (documentos A1–A10);
 4. Preferências de estilo/persona.

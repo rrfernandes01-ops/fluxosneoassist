@@ -1,6 +1,6 @@
 # 04 — Guardrails globais e matriz regulatória
 
-> Cada agente deve se atentar a **toda e qualquer legislação que assiste o setor**, sempre alinhado ao **CDC**, à **LGPD** e aos **órgãos regulatórios** que tangem cada área ou segmento do perfil atendido. Este documento define os guardrails comuns e a matriz por agente. Os guardrails específicos estão detalhados em cada documento A1–A9.
+> Cada agente deve se atentar a **toda e qualquer legislação que assiste o setor**, sempre alinhado ao **CDC**, à **LGPD** e aos **órgãos regulatórios** que tangem cada área ou segmento do perfil atendido. Este documento define os guardrails comuns e a matriz por agente. Os guardrails específicos estão detalhados em cada documento A1–A10.
 
 ## 1. Guardrails universais (todos os agentes)
 

@@ -13,7 +13,7 @@
 | I-05 | **Logística / transportadora (rastreio)** | Rastreamento de entrega em tempo real e previsão de entrega | A1, A5, A6 | P0 |
 | I-06 | **Catálogo de produtos** | Ficha técnica, composição, tabela nutricional, modo de uso, estoque, preço no site | A1, A2, A3, A4, A8 | P0 |
 | I-07 | **ERP / faturamento JL FIT e FTW B2B** | Pedidos B2B, faturamento, títulos, prazos, tabela de preço por canal | A5, A6, A7 | P1 |
-| I-08 | **CRM comercial B2B** | Cadastro de leads B2B, carteira por representante, status de crédito (somente sinalização — negociação é humana) | A5, A6, A7 | P1 |
+| I-08 | **CRM comercial B2B** | Cadastro de leads B2B (inclusive leads de terceirização), carteira por representante, status de crédito (somente sinalização — negociação é humana) | A5, A6, A7, A10 | P1 |
 | I-09 | **Base de representantes** | Validar a identidade do representante — fase 1: **primeiro nome + CPF** confirmados na base (retorna categoria e carteira); fase 2 futura conforme documentação | A7 | P1 |
 | I-10 | **Plataforma de afiliados** | Cadastro de afiliado, status de aprovação, link/cupom, painel de comissões | A9 | P1 |
 | I-11 | **Base de profissionais parceiros** | Cadastro e validação de CRM/CRN, status da parceria | A8 | P1 |
@@ -22,6 +22,7 @@
 | I-14 | **Agenda de visitas / distribuidor** | Agendar visita de representante para lead B2B qualificado | A5, A6 | P2 |
 | I-15 | **Localizador de PDVs / lojas oficiais** | Indicar ponto de venda ou loja oficial de marketplace mais próxima | A2, A4 | P2 |
 | I-16 | **Calendário JL Educa** | Consultar o calendário disponível do time JL Educa para agendamento de treinamentos (futura; até lá, coleta manual + fila JL Educa) | A7 | P2 |
+| I-17 | **Pipefy — Trade Marketing** | Criar o card da solicitação de ação de trade no pipe do time, ler a etapa/fase do card e apoiar as confirmações pendentes de cada fase (futura; até lá, coleta manual criteriosa + fila Trade Marketing) | A7 | P1 |
 
 ## 1.1 Placeholders de integração (substituíveis)
 
@@ -46,12 +47,13 @@ As documentações técnicas das integrações ainda serão fornecidas. Até lá
 | `[[INT_AGENDA]]` | I-14 | Agenda de visitas de representantes |
 | `[[INT_PDV]]` | I-15 | Localizador de PDVs e lojas oficiais |
 | `[[INT_AGENDA_JLEDUCA]]` | I-16 | Calendário disponível do time JL Educa (treinamentos) |
+| `[[INT_PIPEFY_TRADE]]` | I-17 | Pipe de Trade Marketing no Pipefy: criação de card, leitura de etapa e confirmações |
 
 ## 2. Contratos esperados (resumo funcional)
 
 ### I-01 — Consumidor por telefone
 - **Entrada**: telefone (E.164) do WhatsApp.
-- **Saída**: `encontrado (bool)`, `id_cliente`, `nome`, `documento_mascarado`, `perfil` (A1–A9 se já classificado), `consentimento_lgpd (bool, versão, data)`.
+- **Saída**: `encontrado (bool)`, `id_cliente`, `nome`, `documento_mascarado`, `perfil` (A1–A10 se já classificado), `consentimento_lgpd (bool, versão, data)`.
 - **Contingência**: tratar como cliente novo (subfluxo de cadastro do documento 02).
 
 ### I-02 — Histórico de protocolos

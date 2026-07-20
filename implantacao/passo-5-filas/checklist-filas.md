@@ -7,7 +7,7 @@
 - [ ] Horário: **segunda a sexta, 9h–18h**.
 - [ ] Calendário de exceções: **feriados nacionais + feriados da cidade de São Paulo**.
 - [ ] Fora do horário: registrar protocolo + mensagem padrão do Artigo 04 (retorno até o fim do próximo dia útil).
-- [ ] Ticket de transbordo recebe automaticamente: perfil (A1–A9), variáveis coletadas, resumo da conversa e motivo (T1–T9).
+- [ ] Ticket de transbordo recebe automaticamente: perfil (A1–A10), variáveis coletadas, resumo da conversa e motivo (T1–T9).
 
 ## Filas a criar
 
@@ -16,6 +16,8 @@
 - [ ] **B2B Farma SP** — recebe A5 e A7 (categoria farma SP).
 - [ ] **B2B Nacional** — recebe A6 e A7 (demais canais).
 - [ ] **JL Educa** — recebe A7 (agendamento de treinamentos; o time retorna com a agenda).
+- [ ] **Trade Marketing** — recebe A7 (solicitações de ações de trade com checklist completo; processo interno via Pipefy).
+- [ ] **Terceirização** — recebe A10 (**nova categoria a criar na NeoAssist**: leads do serviço de terceirização, sequência de atendimento e orçamento).
 - [ ] **Parcerias Profissionais** — recebe A8.
 - [ ] **Marketing / Afiliados** — recebe A9.
 - [ ] **Privacidade / DPO** — recebe todos (LGPD e direitos de titular).
@@ -32,7 +34,8 @@
 | A4 | Consumidor (qualidade com prioridade) | — |
 | A5 | B2B Farma SP | Cobrança / Crédito |
 | A6 | B2B Nacional | Cobrança / Crédito |
-| A7 | B2B Farma SP ou B2B Nacional (pela categoria — Atendimento CX) | JL Educa (treinamentos); gestão comercial (comissões/contrato) |
+| A7 | B2B Farma SP ou B2B Nacional (pela categoria — Atendimento CX) | JL Educa (treinamentos); Trade Marketing (ações de trade); gestão comercial (comissões/contrato) |
+| A10 | Terceirização | — |
 | A8 | Parcerias Profissionais | — |
 | A9 | Marketing / Afiliados | — |
 | Todos | Privacidade / DPO e Jurídico / Ouvidoria (assuntos restritos, ramo N19) | — |

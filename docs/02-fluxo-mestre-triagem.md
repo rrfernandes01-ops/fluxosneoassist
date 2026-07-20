@@ -1,6 +1,6 @@
 # 02 — Fluxo mestre: entrada, identificação e triagem (Número Consumidor)
 
-> Este é o fluxo de automação principal a ser montado na NeoAssist para o canal WhatsApp **(11) 2388-3360**. Ele identifica quem está entrando em contato e roteia para o agente de IA do perfil correto (A1 a A9).
+> Este é o fluxo de automação principal a ser montado na NeoAssist para o canal WhatsApp **(11) 2388-3360**. Ele identifica quem está entrando em contato e roteia para o agente de IA do perfil correto (A1 a A10).
 
 ## 1. Visão geral do fluxo
 
@@ -32,6 +32,7 @@ flowchart TD
     ROUTE -- Representante comercial --> A7[Agente A7\nRepresentantes]
     ROUTE -- Profissional de saúde --> A8[Agente A8\nProfissionais de Saúde]
     ROUTE -- Influenciador/afiliado --> A9[Agente A9\nInfluenciadores]
+    ROUTE -- Quero produzir /\nterceirização --> A10[Agente A10\nTerceirização]
 
     ROUTE -- Assunto restrito\n(jurídico, LGPD, imprensa,\ncobrança, reclamação formal) --> HUMANO[Transbordo humano\nimediato — doc 05]
 ```
@@ -104,6 +105,7 @@ Se a intenção não ficou clara na pergunta aberta, apresentar o menu de triage
 > 7. Sou representante comercial
 > 8. Sou profissional de saúde e quero parceria
 > 9. Sou influenciador(a) e quero ser afiliado(a)
+> 10. Quero produzir com a Fitoway (terceirização)
 
 ### 4.1 Regras do roteador
 
@@ -118,6 +120,7 @@ Se a intenção não ficou clara na pergunta aberta, apresentar o menu de triage
 | 7 — Representante | **A7** | Validar vínculo na base de representantes |
 | 8 — Profissional de saúde | **A8** | Coletar registro profissional (CRM/CRN) |
 | 9 — Influenciador | **A9** | Programa de afiliados |
+| 10 — Quero produzir / terceirização | **A10** | Lead de terceirização → categoria Terceirização |
 | Jurídico, Procon/Reclame Aqui, advogado, dívida/cobrança, LGPD, imprensa | **Transbordo humano imediato** | Documento 05 |
 | Intenção incompreendida 2× | Oferecer transbordo | Documento 01, seção 4 |
 
@@ -148,6 +151,6 @@ Se durante o atendimento ficar claro que o usuário pertence a outro perfil (ex.
    - Não → subfluxo de cadastro (nome → CPF → aviso → link LGPD (I-03) → registro do aceite).
 5. **Entrada do usuário** (pergunta aberta) → **classificação de intenção Núb.ia**.
 6. **Condição**: confiança da intenção ≥ limiar? Se não → **menu interativo** de triagem.
-7. **Roteador** (switch por perfil) → **hand-off para o agente Núb.ia Resolve** do perfil (A1–A9), passando variáveis: nome, documento, perfil, protocolos recentes, resumo da triagem.
+7. **Roteador** (switch por perfil) → **hand-off para o agente Núb.ia Resolve** do perfil (A1–A10), passando variáveis: nome, documento, perfil, protocolos recentes, resumo da triagem.
 8. **Ramo de exceção**: assuntos restritos → fila humana correspondente (documento 05).
 9. **Pós-conversa**: gravação do perfil no cadastro, tag do assunto, pesquisa de resolução.

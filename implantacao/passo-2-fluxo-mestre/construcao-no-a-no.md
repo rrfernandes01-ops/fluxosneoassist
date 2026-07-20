@@ -9,7 +9,7 @@
 | `{{telefone}}` | Canal | Consulta I-01 |
 | `{{nome}}` | I-01 ou coleta | Saudação, transbordo |
 | `{{documento}}` | I-01 (mascarado) ou coleta | Validação de identidade |
-| `{{perfil}}` | I-01 (se já classificado) ou triagem | Roteamento A1–A9 |
+| `{{perfil}}` | I-01 (se já classificado) ou triagem | Roteamento A1–A10 |
 | `{{protocolo_recente}}`, `{{assunto_recente}}` | I-02 | Oferta de continuidade |
 | `{{consentimento_ok}}` | I-01/I-03 | Bloqueio de prosseguimento |
 
@@ -85,6 +85,7 @@ Lista interativa WhatsApp:
 7. Sou representante comercial
 8. Sou profissional de saúde e quero parceria
 9. Sou influenciador(a) e quero ser afiliado(a)
+10. Quero produzir com a Fitoway (terceirização)
 
 ### N16 — Entrada: pergunta aberta (clientes já conhecidos)
 > Como posso te ajudar hoje?
@@ -103,7 +104,7 @@ Lista interativa WhatsApp:
 → **Transbordo imediato** para a fila correspondente (ver passo 5), com mensagem de transbordo do Artigo 04. Este ramo tem prioridade sobre qualquer outro.
 
 ### N20 — Hand-off: agente Núb.ia Resolve do perfil
-Roteia para A1–A9 passando: `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{protocolo_recente}}`, resumo da triagem.
+Roteia para A1–A10 passando: `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{protocolo_recente}}`, resumo da triagem.
 
 ### N21 — Opt-in de marketing (opcional; somente após atendimento bem resolvido)
 Oferecido **apenas** ao final de um atendimento resolvido (resposta positiva à pergunta de resolução), **nunca como pedágio** e no máximo 1 vez por período definido pela curadoria. Registrar via `[[INT_CONSENTIMENTO]]`: `optin_marketing = sim/nao` + data/hora + versão do aviso vigente.
