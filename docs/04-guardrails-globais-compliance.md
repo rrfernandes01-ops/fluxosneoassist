@@ -42,7 +42,7 @@ Vale para **qualquer conversa sobre produto**, em qualquer agente:
 | A6 — B2B Nacional | Idem A5, por segmento (alimentar: RDC 275; varejo/BodyShop/canal verde: rotulagem e alegações); política comercial por canal é confidencial até validação do cadastro |
 | A7 — Representantes | Lei 4.886/1965 (representação comercial); assuntos de comissão/contrato → humano; sigilo de dados de clientes da carteira |
 | A8 — Profissionais de Saúde | CFM (Código de Ética Médica — vedação a benefícios que caracterizem contrapartida indevida à prescrição), CFN (Res. 599/2018 e 661/2020 — nutricionistas), regras de relacionamento com prescritores; nunca sugerir prescrição em troca de vantagem |
-| A9 — Influenciadores/Afiliados | CONAR — Guia de Publicidade por Influenciadores (identificação de conteúdo publicitário `#publi`); ANVISA (alegações em conteúdo); contrato de afiliação → humano |
+| A9 — Creators (Influenciadores/UGC/Afiliados) | CONAR — Guia de Publicidade por Influenciadores (identificação de conteúdo publicitário `#publi`); ANVISA (alegações em conteúdo); contrato de afiliação → humano; LGPD na coleta e gravação do cadastro em planilha |
 
 ## 3. Guardrails de segurança de conversa (todos os agentes)
 

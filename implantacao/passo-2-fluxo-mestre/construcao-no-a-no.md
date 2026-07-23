@@ -84,7 +84,7 @@ Lista interativa WhatsApp:
 6. Sou lojista / revenda (outros canais)
 7. Sou representante comercial
 8. Sou profissional de saúde e quero parceria
-9. Sou influenciador(a) e quero ser afiliado(a)
+9. Sou creator (influenciador, UGC ou afiliado)
 10. Quero produzir com a Fitoway (terceirização)
 
 ### N16 — Entrada: pergunta aberta (clientes já conhecidos)

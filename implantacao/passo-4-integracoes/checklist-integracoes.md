@@ -17,6 +17,7 @@
 - [ ] **I-08 — CRM comercial B2B**: registro de leads, carteira por representante → A5, A6, A7.
 - [ ] **I-09 — Base de representantes**: validação de vínculo/categoria/carteira → A7. *Sem ela*: A7 transborda direto.
 - [ ] **I-10 — Plataforma de afiliados**: cadastro, aprovação, link/cupom, painel → A9.
+- [ ] **I-18 — Google Sheets Creators** (`[[INT_SHEETS_CREATORS]]`): criar as 3 planilhas por perfil (Influenciador, UGC, Afiliado — estrutura em `../../docs/integracoes-sheets-creators.md`) no Drive do responsável e conectar o passo inserir_linha → A9. *Sem ela*: registrar o cadastro no protocolo + fila Marketing / Afiliados.
 - [ ] **I-11 — Base de profissionais parceiros**: cadastro e validação CRM/CRN → A8.
 - [ ] **I-17 — Pipefy Trade Marketing** (`[[INT_PIPEFY_TRADE]]`): criar card no pipe de Trade, ler etapa e apoiar confirmações → A7. *Sem ela*: coleta manual criteriosa (checklist completo do assunto Trade) + fila Trade Marketing.
 

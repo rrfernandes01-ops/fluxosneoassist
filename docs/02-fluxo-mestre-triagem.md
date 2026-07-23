@@ -31,7 +31,7 @@ flowchart TD
     ROUTE -- Revenda outros canais --> A6[Agente A6\nB2B Nacional]
     ROUTE -- Representante comercial --> A7[Agente A7\nRepresentantes]
     ROUTE -- Profissional de saúde --> A8[Agente A8\nProfissionais de Saúde]
-    ROUTE -- Influenciador/afiliado --> A9[Agente A9\nInfluenciadores]
+    ROUTE -- Creator: influenciador/UGC/afiliado --> A9[Agente A9\nCreators]
     ROUTE -- Quero produzir /\nterceirização --> A10[Agente A10\nTerceirização]
 
     ROUTE -- Assunto restrito\n(jurídico, LGPD, imprensa,\ncobrança, reclamação formal) --> HUMANO[Transbordo humano\nimediato — doc 05]
@@ -104,7 +104,7 @@ Se a intenção não ficou clara na pergunta aberta, apresentar o menu de triage
 > 6. Sou lojista / revenda (outros canais)
 > 7. Sou representante comercial
 > 8. Sou profissional de saúde e quero parceria
-> 9. Sou influenciador(a) e quero ser afiliado(a)
+> 9. Sou creator (influenciador, UGC ou afiliado)
 > 10. Quero produzir com a Fitoway (terceirização)
 
 ### 4.1 Regras do roteador
@@ -119,7 +119,7 @@ Se a intenção não ficou clara na pergunta aberta, apresentar o menu de triage
 | 6 — Revenda outros canais | **A6** | Alimentar, varejo, BodyShop, canal verde, farma fora de SP |
 | 7 — Representante | **A7** | Validar vínculo na base de representantes |
 | 8 — Profissional de saúde | **A8** | Coletar registro profissional (CRM/CRN) |
-| 9 — Influenciador | **A9** | Programa de afiliados |
+| 9 — Creator (influenciador/UGC/afiliado) | **A9** | Cadastro conversacional + tag + planilha do perfil |
 | 10 — Quero produzir / terceirização | **A10** | Lead de terceirização → categoria Terceirização |
 | Jurídico, Procon/Reclame Aqui, advogado, dívida/cobrança, LGPD, imprensa | **Transbordo humano imediato** | Documento 05 |
 | Intenção incompreendida 2× | Oferecer transbordo | Documento 01, seção 4 |
