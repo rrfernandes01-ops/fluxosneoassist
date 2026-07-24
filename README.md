@@ -18,7 +18,7 @@ Um único número de WhatsApp recebe todos os públicos do Grupo Fitoway. Um **f
 | 6 | Clientes B2B nacionais: Alimentar, Varejo, BodyShop, Canal Verde e Farma fora de SP | A6 — B2B Nacional | [docs/agentes/A6-agente-b2b-nacional.md](docs/agentes/A6-agente-b2b-nacional.md) |
 | 7 | Representantes comerciais (Farma SP e demais canais nacionais) | A7 — Representantes | [docs/agentes/A7-agente-representantes.md](docs/agentes/A7-agente-representantes.md) |
 | 8 | Profissionais de saúde parceiros (médicos, nutricionistas, nutrólogos) | A8 — Profissionais de Saúde | [docs/agentes/A8-agente-profissionais-saude.md](docs/agentes/A8-agente-profissionais-saude.md) |
-| 9 | Influenciadores digitais e celebridades (programa de afiliados) | A9 — Influenciadores e Afiliados | [docs/agentes/A9-agente-influenciadores-afiliados.md](docs/agentes/A9-agente-influenciadores-afiliados.md) |
+| 9 | Creators: influenciadores, UGC e afiliados (programa de creators) | A9 — Creators | [docs/agentes/A9-agente-influenciadores-afiliados.md](docs/agentes/A9-agente-influenciadores-afiliados.md) |
 | 10 | Interessados no serviço de terceirização da indústria (private label) | A10 — Terceirização | [docs/agentes/A10-agente-terceirizacao.md](docs/agentes/A10-agente-terceirizacao.md) |
 
 ## Estrutura da documentação
@@ -31,6 +31,7 @@ docs/
 ├── 04-guardrails-globais-compliance.md   # CDC, LGPD, ANVISA e matriz regulatória por agente
 ├── 05-transbordo-humano-e-filas.md       # Regras de transferência, filas, horários e protocolo
 ├── 06-metricas-e-monitoramento.md        # KPIs, curadoria e melhoria contínua
+├── integracoes-sheets-creators.md        # Estrutura das 3 planilhas de cadastro de creators (A9)
 ├── lgpd/
 │   ├── aviso-de-privacidade-whatsapp-ftw.md              # Texto público (minuta p/ validação jurídica/DPO)
 │   └── lgpd-operacional-consentimento-ropa-direitos.md   # Consentimento, ROPA e direitos do titular

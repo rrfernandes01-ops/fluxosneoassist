@@ -16,6 +16,7 @@
 | I-08 | **CRM comercial B2B** | Cadastro de leads B2B (inclusive leads de terceirização), carteira por representante, status de crédito (somente sinalização — negociação é humana) | A5, A6, A7, A10 | P1 |
 | I-09 | **Base de representantes** | Validar a identidade do representante — fase 1: **primeiro nome + CPF** confirmados na base (retorna categoria e carteira); fase 2 futura conforme documentação | A7 | P1 |
 | I-10 | **Plataforma de afiliados** | Cadastro de afiliado, status de aprovação, link/cupom, painel de comissões | A9 | P1 |
+| I-18 | **Google Sheets Creators** | Gravar o cadastro de creators na planilha do perfil (3 planilhas: Influenciador, UGC, Afiliado), mantendo campos e tags do fluxo original | A9 | P1 |
 | I-11 | **Base de profissionais parceiros** | Cadastro e validação de CRM/CRN, status da parceria | A8 | P1 |
 | I-12 | **Consulta CNPJ (Receita/serviço externo)** | Validar CNPJ e UF na triagem B2B | Fluxo mestre, A5, A6 | P2 |
 | I-13 | **Pagamentos (gateway do site)** | Status de pagamento, reenvio de boleto/Pix (sem dados de cartão) | A1 | P2 |
@@ -48,6 +49,7 @@ As documentações técnicas das integrações ainda serão fornecidas. Até lá
 | `[[INT_PDV]]` | I-15 | Localizador de PDVs e lojas oficiais |
 | `[[INT_AGENDA_JLEDUCA]]` | I-16 | Calendário disponível do time JL Educa (treinamentos) |
 | `[[INT_PIPEFY_TRADE]]` | I-17 | Pipe de Trade Marketing no Pipefy: criação de card, leitura de etapa e confirmações |
+| `[[INT_SHEETS_CREATORS]]` | I-18 | Google Sheets de cadastro de creators (3 planilhas por perfil — ver `integracoes-sheets-creators.md`) |
 
 ## 2. Contratos esperados (resumo funcional)
 
