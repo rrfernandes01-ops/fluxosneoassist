@@ -32,6 +32,11 @@ docs/
 ├── 05-transbordo-humano-e-filas.md       # Regras de transferência, filas, horários e protocolo
 ├── 06-metricas-e-monitoramento.md        # KPIs, curadoria e melhoria contínua
 ├── integracoes-sheets-creators.md        # Estrutura das 3 planilhas de cadastro de creators (A9)
+├── integracoes/                          # Documentação técnica das APIs (NeoAssist protocolo; Tray plano)
+│   ├── neoassist-protocolo-criacao.md
+│   ├── neoassist-protocolo-atualizacao.md
+│   ├── neoassist-protocolo-historico-status.md
+│   └── tray-ecommerce-a1.md
 ├── lgpd/
 │   ├── aviso-de-privacidade-whatsapp-ftw.md              # Texto público (minuta p/ validação jurídica/DPO)
 │   └── lgpd-operacional-consentimento-ropa-direitos.md   # Consentimento, ROPA e direitos do titular

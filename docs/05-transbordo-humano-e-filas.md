@@ -79,6 +79,8 @@ Sem emoji quando o assunto for reclamação, atraso ou reembolso.
 
 Cada agente indica no próprio documento a fila-padrão de destino. O resumo estruturado (perfil, protocolos, variáveis coletadas) acompanha o ticket na NeoAssist.
 
+**Operacionalização na API NeoAssist** (`[[INT_PROTOCOLO_ATUALIZAR]]` — `Update.json`): o transbordo com contexto é feito com `workflowAction: openWorkflow`, levando `WFObservacao` = resumo do atendimento (garante que o usuário nunca repete a história) e `DepartamentoID` = ID da fila da categoria. Encerramento pela IA usa `ResolverProtocolo: "on"` + `Observacao`. Os **IDs de departamento de cada fila abaixo** devem ser preenchidos na implantação. Detalhes em `integracoes/neoassist-protocolo-atualizacao.md`.
+
 **Classificação LGPD**: todo transbordo para a fila Privacidade/DPO recebe a tag **"Privacidade e proteção de dados (LGPD)"** na árvore de classificação, com o motivo (acesso, correção, exclusão, revogação de consentimento), para aparecer nos relatórios gerenciais. Roteiro completo do pedido de privacidade em `lgpd/lgpd-operacional-consentimento-ropa-direitos.md` (Parte C) e no Artigo 06 da implantação.
 
 ## 5. Horário e comportamento fora do horário
