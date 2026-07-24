@@ -62,7 +62,7 @@ Herda integralmente o documento 01. Reforços para este perfil:
 
 ## 8. Integrações utilizadas
 
-I-01, I-02, I-04 (pedidos), I-05 (rastreio), I-06 (catálogo), I-13 (pagamentos). Contingências conforme documento 03.
+I-01, I-02 (histórico/protocolos — `ProtocolStatusHistory`), I-04 (pedidos — **Tray**, ver `../integracoes/tray-ecommerce-a1.md`), I-05 (rastreio), I-06 (catálogo), I-13 (pagamentos), I-19 (criar protocolo), I-20 (atualizar/transbordo). Contingências conforme documento 03.
 
 ## 9. Métricas específicas
 

@@ -7,9 +7,9 @@
 | ID | Integração | Uso no fluxo | Agentes | Prioridade |
 |----|------------|--------------|---------|------------|
 | I-01 | **NeoAssist — consumidor por telefone** | Identificar se o contato já existe na base ao entrar no canal | Fluxo mestre | P0 (essencial) |
-| I-02 | **NeoAssist — histórico e protocolos** | Ler o histórico de atendimentos anteriores e os protocolos **abertos e fechados**, preparando o contexto e permitindo apresentar soluções proativamente | Fluxo mestre, todos | P0 |
+| I-02 | **NeoAssist — histórico e protocolos** | Ler o histórico de atendimentos anteriores e os protocolos **abertos e fechados**, preparando o contexto e permitindo apresentar soluções proativamente. API oficial: `ProtocolStatusHistory.json` (GET) — ver `integracoes/neoassist-protocolo-historico-status.md` | Fluxo mestre, todos | P0 |
 | I-03 | **Transparência e opt-in LGPD** | Registrar em log a exibição do aviso de transparência (data/hora + versão) e gravar o opt-in/opt-out de marketing (`optin_marketing` com data/hora + versão do aviso) | Fluxo mestre | P0 |
-| I-04 | **E-commerce FTW (plataforma do site)** | Status de pedido, itens, pagamento, NF, trocas/devoluções | A1, A2 | P0 |
+| I-04 | **E-commerce FTW (Tray)** | Status de pedido, itens, pagamento, NF, trocas/devoluções. Plataforma: **Tray** — plano/mapeamento em `integracoes/tray-ecommerce-a1.md` (doc oficial a validar) | A1, A2 | P0 |
 | I-05 | **Logística / transportadora (rastreio)** | Rastreamento de entrega em tempo real e previsão de entrega | A1, A5, A6 | P0 |
 | I-06 | **Catálogo de produtos** | Ficha técnica, composição, tabela nutricional, modo de uso, estoque, preço no site | A1, A2, A3, A4, A8 | P0 |
 | I-07 | **ERP / faturamento JL FIT e FTW B2B** | Pedidos B2B, faturamento, títulos, prazos, tabela de preço por canal | A5, A6, A7 | P1 |
@@ -17,6 +17,8 @@
 | I-09 | **Base de representantes** | Validar a identidade do representante — fase 1: **primeiro nome + CPF** confirmados na base (retorna categoria e carteira); fase 2 futura conforme documentação | A7 | P1 |
 | I-10 | **Plataforma de afiliados** | Cadastro de afiliado, status de aprovação, link/cupom, painel de comissões | A9 | P1 |
 | I-18 | **Google Sheets Creators** | Gravar o cadastro de creators na planilha do perfil (3 planilhas: Influenciador, UGC, Afiliado), mantendo campos e tags do fluxo original | A9 | P1 |
+| I-19 | **NeoAssist — criar protocolo** | Abrir/registrar protocolo do atendimento (`RegisterOnly.json`, POST). Inclui `Tags` (perfil/classificação), `Origin: 16` (WhatsApp), status customizado. Ver `integracoes/neoassist-protocolo-criacao.md` | Fluxo mestre, todos | P0 |
+| I-20 | **NeoAssist — atualizar protocolo / Workflow** | Atualizar, classificar, encerrar e **executar transbordo com contexto** via `workflowAction` (`Update.json`, POST). Ver `integracoes/neoassist-protocolo-atualizacao.md` | Todos (transbordo) | P0 |
 | I-11 | **Base de profissionais parceiros** | Cadastro e validação de CRM/CRN, status da parceria | A8 | P1 |
 | I-12 | **Consulta CNPJ (Receita/serviço externo)** | Validar CNPJ e UF na triagem B2B | Fluxo mestre, A5, A6 | P2 |
 | I-13 | **Pagamentos (gateway do site)** | Status de pagamento, reenvio de boleto/Pix (sem dados de cartão) | A1 | P2 |
@@ -27,7 +29,7 @@
 
 ## 1.1 Placeholders de integração (substituíveis)
 
-As documentações técnicas das integrações ainda serão fornecidas. Até lá, **todo o projeto (documentos e prompts dos agentes) referencia cada integração por um placeholder padronizado**, no formato `[[INT_*]]`. Quando a documentação real de uma integração chegar: (1) atualizar o contrato dela neste documento; (2) substituir o placeholder pelo conector real na plataforma NeoAssist; (3) desativar a contingência correspondente; (4) rodar os testes de aceitação (incluindo o T9 com a integração desligada).
+As documentações técnicas das integrações ainda serão fornecidas. Até lá, **todo o projeto (documentos e prompts dos agentes) referencia cada integração por um placeholder padronizado**, no formato `[[INT_*]]`. Documentações técnicas já recebidas ficam em [`integracoes/`](integracoes/README.md) (NeoAssist — protocolo; Tray — plano). Quando a documentação real de uma integração chegar: (1) atualizar o contrato dela neste documento; (2) substituir o placeholder pelo conector real na plataforma NeoAssist; (3) desativar a contingência correspondente; (4) rodar os testes de aceitação (incluindo o T9 com a integração desligada).
 
 | Placeholder | Integração (ID) | O que executa |
 |-------------|-----------------|---------------|
@@ -50,6 +52,8 @@ As documentações técnicas das integrações ainda serão fornecidas. Até lá
 | `[[INT_AGENDA_JLEDUCA]]` | I-16 | Calendário disponível do time JL Educa (treinamentos) |
 | `[[INT_PIPEFY_TRADE]]` | I-17 | Pipe de Trade Marketing no Pipefy: criação de card, leitura de etapa e confirmações |
 | `[[INT_SHEETS_CREATORS]]` | I-18 | Google Sheets de cadastro de creators (3 planilhas por perfil — ver `integracoes-sheets-creators.md`) |
+| `[[INT_PROTOCOLO_CRIAR]]` | I-19 | NeoAssist — criar protocolo (`RegisterOnly.json`) |
+| `[[INT_PROTOCOLO_ATUALIZAR]]` | I-20 | NeoAssist — atualizar protocolo / Workflow / transbordo (`Update.json`) |
 
 ## 2. Contratos esperados (resumo funcional)
 
