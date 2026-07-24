@@ -2,7 +2,17 @@
 
 > Destino dos cadastros do agente A9 (Influenciadores, UGC e Afiliados). Espelha o passo `google_sheets → inserir_linha` do fluxo original do Direct, mantendo os campos e as tags. **Decisão do projeto**: três planilhas separadas, uma por perfil.
 >
-> **Status**: a planilha ainda **não foi criada**. Quando autorizado, criar no Google Drive do responsável (o assistente pode criar via integração do Drive) e substituir o placeholder `[[INT_SHEETS_CREATORS]]` pelo conector real na NeoAssist (integração I-18).
+> **Status**: as três planilhas **foram criadas** no Google Drive de rr.fernandes01@gmail.com (raiz do Meu Drive), com a linha de cabeçalho. Falta apenas conectar o passo `inserir_linha` na NeoAssist, substituindo o placeholder `[[INT_SHEETS_CREATORS]]` pelo conector real (integração I-18).
+
+## Planilhas (Google Sheets)
+
+| Perfil | ID | Link |
+|--------|----|----|
+| Influenciadores | `1NzWtvI5YyPphneuFX8rDhEVg7l8DLJO1QhJGIE0vEug` | <https://docs.google.com/spreadsheets/d/1NzWtvI5YyPphneuFX8rDhEVg7l8DLJO1QhJGIE0vEug/edit> |
+| UGC | `1DygZNq3LrTOFopREfeULMKzw3RS_XmxMz5bpEw8wKMs` | <https://docs.google.com/spreadsheets/d/1DygZNq3LrTOFopREfeULMKzw3RS_XmxMz5bpEw8wKMs/edit> |
+| Afiliados | `1Gh9eodQ4ygOTL88WDjRKsDsl7x-8VJKarhyGJ4TxX2Y` | <https://docs.google.com/spreadsheets/d/1Gh9eodQ4ygOTL88WDjRKsDsl7x-8VJKarhyGJ4TxX2Y/edit> |
+
+> Ao conectar na NeoAssist, apontar a gravação de cada perfil para o ID correspondente. Conferir a ordem das colunas do cabeçalho (abaixo) no mapeamento.
 
 ## Placeholder e integração
 
