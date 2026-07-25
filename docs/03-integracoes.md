@@ -18,7 +18,8 @@
 | I-10 | **Plataforma de afiliados** | Cadastro de afiliado, status de aprovação, link/cupom, painel de comissões | A9 | P1 |
 | I-18 | **Google Sheets Creators** | Gravar o cadastro de creators na planilha do perfil (3 planilhas: Influenciador, UGC, Afiliado), mantendo campos e tags do fluxo original | A9 | P1 |
 | I-19 | **NeoAssist — criar protocolo** | Abrir/registrar protocolo do atendimento (`RegisterOnly.json`, POST). Inclui `Tags` (perfil/classificação), `Origin: 16` (WhatsApp), status customizado. Ver `integracoes/neoassist-protocolo-criacao.md` | Fluxo mestre, todos | P0 |
-| I-20 | **NeoAssist — atualizar protocolo / Workflow** | Atualizar, classificar, encerrar e **executar transbordo com contexto** via `workflowAction` (`Update.json`, POST). Ver `integracoes/neoassist-protocolo-atualizacao.md` | Todos (transbordo) | P0 |
+| I-20 | **NeoAssist — atualizar protocolo / Workflow** | Atualizar, classificar, encerrar e **executar transbordo com contexto** via `workflowAction` (`Update.json`, POST). **Requer o módulo Workflow habilitado** (previsto). Ver `integracoes/neoassist-protocolo-atualizacao.md` | Todos (transbordo); A11 (casos) | P0 |
+| I-21 | **Pipefy — CX Casos** | Abrir card no pipe do CX (via Workflow) para casos com decisão financeira e ler as etapas do processo. Ver `processos/reclamacao-decisao-financeira.md` | A11 (e CX) | P1 |
 | I-11 | **Base de profissionais parceiros** | Cadastro e validação de CRM/CRN, status da parceria | A8 | P1 |
 | I-12 | **Consulta CNPJ (Receita/serviço externo)** | Validar CNPJ e UF na triagem B2B | Fluxo mestre, A5, A6 | P2 |
 | I-13 | **Pagamentos (gateway do site)** | Status de pagamento, reenvio de boleto/Pix (sem dados de cartão) | A1 | P2 |
@@ -54,6 +55,7 @@ As documentações técnicas das integrações ainda serão fornecidas. Até lá
 | `[[INT_SHEETS_CREATORS]]` | I-18 | Google Sheets de cadastro de creators (3 planilhas por perfil — ver `integracoes-sheets-creators.md`) |
 | `[[INT_PROTOCOLO_CRIAR]]` | I-19 | NeoAssist — criar protocolo (`RegisterOnly.json`) |
 | `[[INT_PROTOCOLO_ATUALIZAR]]` | I-20 | NeoAssist — atualizar protocolo / Workflow / transbordo (`Update.json`) |
+| `[[INT_PIPEFY_CX]]` | I-21 | Pipefy do CX — casos com decisão financeira (card + leitura de etapas) |
 
 ## 2. Contratos esperados (resumo funcional)
 

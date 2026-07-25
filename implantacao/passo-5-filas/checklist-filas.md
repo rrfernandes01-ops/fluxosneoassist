@@ -18,6 +18,7 @@
 - [ ] **JL Educa** — recebe A7 (agendamento de treinamentos; o time retorna com a agenda).
 - [ ] **Trade Marketing** — recebe A7 (solicitações de ações de trade com checklist completo; processo interno via Pipefy).
 - [ ] **Terceirização** — recebe A10 (**nova categoria a criar na NeoAssist**: leads do serviço de terceirização, sequência de atendimento e orçamento).
+- [ ] **CX Casos** — recebe A11 (e A1/A5/A6/A7 por hand-off): reclamações/casos com **decisão financeira**. Requer o **módulo Workflow habilitado** e o **DepartamentoID** do WF; abre card no **Pipefy** do CX. Decisão CX + Head.
 - [ ] **Parcerias Profissionais** — recebe A8.
 - [ ] **Marketing / Afiliados** — recebe A9.
 - [ ] **Privacidade / DPO** — recebe todos (LGPD e direitos de titular).
@@ -36,6 +37,7 @@
 | A6 | B2B Nacional | Cobrança / Crédito |
 | A7 | B2B Farma SP ou B2B Nacional (pela categoria — Atendimento CX) | JL Educa (treinamentos); Trade Marketing (ações de trade); gestão comercial (comissões/contrato) |
 | A10 | Terceirização | — |
+| A11 | CX Casos (Workflow → Pipefy) | — |
 | A8 | Parcerias Profissionais | — |
 | A9 | Marketing / Afiliados | — |
 | Todos | Privacidade / DPO e Jurídico / Ouvidoria (assuntos restritos, ramo N19) | — |

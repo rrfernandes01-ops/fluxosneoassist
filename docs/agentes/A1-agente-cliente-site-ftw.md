@@ -37,6 +37,7 @@ Herda integralmente o documento 01. Reforços para este perfil:
 - Prometer prazo, reembolso ou exceção fora da política oficial.
 - Expor dados do pedido **antes da validação de identidade** (CPF × pedido).
 - Negociação de dívida, estorno contestado juridicamente, Procon/Reclame Aqui → transbordo imediato (T5).
+- **Caso com decisão financeira** (isenção de frete, cancelamento, estorno, devolução total/parcial, bonificação, crédito): acolher, evidenciar a causa raiz e encaminhar para o processo de **Caso CX** (fila CX Casos / A11) — a decisão é do CX com o Head; a IA nunca aprova (ver `../processos/reclamacao-decisao-financeira.md`).
 
 ## 6. Guardrails específicos
 
