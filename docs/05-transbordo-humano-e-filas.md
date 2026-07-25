@@ -71,6 +71,7 @@ Sem emoji quando o assunto for reclamação, atraso ou reembolso.
 | **JL Educa** | A7 | Agendamento de treinamentos da plataforma JL Educa (retorna com a agenda) |
 | **Trade Marketing** | A7 | Solicitações de ações de trade (degustação, eventos, presença VIP) com checklist completo; processo interno via Pipefy |
 | **Terceirização** | A10 | Leads do serviço de terceirização (nova categoria na NeoAssist) — sequência de atendimento e orçamento |
+| **CX Casos** | A11 (e A1/A5/A6/A7 por hand-off) | Reclamações/casos com **decisão financeira** — abre Workflow → Pipefy; decisão CX + Head (ver `processos/reclamacao-decisao-financeira.md`) |
 | **Parcerias Profissionais** | A8 | Médicos, nutricionistas, nutrólogos |
 | **Marketing / Afiliados** | A9 | Influenciadores, programa de afiliados |
 | **Privacidade / DPO** | Todos | LGPD e direitos de titular |

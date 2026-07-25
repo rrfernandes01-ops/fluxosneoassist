@@ -20,6 +20,7 @@ Um único número de WhatsApp recebe todos os públicos do Grupo Fitoway. Um **f
 | 8 | Profissionais de saúde parceiros (médicos, nutricionistas, nutrólogos) | A8 — Profissionais de Saúde | [docs/agentes/A8-agente-profissionais-saude.md](docs/agentes/A8-agente-profissionais-saude.md) |
 | 9 | Creators: influenciadores, UGC e afiliados (programa de creators) | A9 — Creators | [docs/agentes/A9-agente-influenciadores-afiliados.md](docs/agentes/A9-agente-influenciadores-afiliados.md) |
 | 10 | Interessados no serviço de terceirização da indústria (private label) | A10 — Terceirização | [docs/agentes/A10-agente-terceirizacao.md](docs/agentes/A10-agente-terceirizacao.md) |
+| 11 | Reclamações/casos com decisão financeira (clientes e colaboradores internos) | A11 — CX Caso Financeiro | [docs/agentes/A11-agente-cx-reclamacao-decisao-financeira.md](docs/agentes/A11-agente-cx-reclamacao-decisao-financeira.md) |
 
 ## Estrutura da documentação
 
@@ -37,6 +38,8 @@ docs/
 │   ├── neoassist-protocolo-atualizacao.md
 │   ├── neoassist-protocolo-historico-status.md
 │   └── tray-ecommerce-a1.md
+├── processos/
+│   └── reclamacao-decisao-financeira.md  # Processo CX → Workflow → Pipefy (decisão CX + Head)
 ├── lgpd/
 │   ├── aviso-de-privacidade-whatsapp-ftw.md              # Texto público (minuta p/ validação jurídica/DPO)
 │   └── lgpd-operacional-consentimento-ropa-direitos.md   # Consentimento, ROPA e direitos do titular
@@ -50,7 +53,8 @@ docs/
     ├── A7-agente-representantes.md
     ├── A8-agente-profissionais-saude.md
     ├── A9-agente-influenciadores-afiliados.md
-    └── A10-agente-terceirizacao.md
+    ├── A10-agente-terceirizacao.md
+    └── A11-agente-cx-reclamacao-decisao-financeira.md
 ```
 
 ## Como implantar na NeoAssist

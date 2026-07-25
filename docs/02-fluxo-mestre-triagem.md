@@ -121,6 +121,7 @@ Se a intenção não ficou clara na pergunta aberta, apresentar o menu de triage
 | 8 — Profissional de saúde | **A8** | Coletar registro profissional (CRM/CRN) |
 | 9 — Creator (influenciador/UGC/afiliado) | **A9** | Cadastro conversacional + tag + planilha do perfil |
 | 10 — Quero produzir / terceirização | **A10** | Lead de terceirização → categoria Terceirização |
+| Reclamação/caso com decisão financeira (cliente ou colaborador interno) | **A11** | Intake profundo → protocolo → Workflow → Pipefy (fila CX Casos). Alcançado por hand-off de A1/A5/A6/A7 ou entrada direta de supervisor/gerente |
 | Jurídico, Procon/Reclame Aqui, advogado, dívida/cobrança, LGPD, imprensa | **Transbordo humano imediato** | Documento 05 |
 | Intenção incompreendida 2× | Oferecer transbordo | Documento 01, seção 4 |
 
