@@ -16,12 +16,13 @@ Pacotes de instruções para o **Claude Cowork** executar no ambiente do usuári
 | 1 | [pacote-cowork-neoassist-nativas.md](pacote-cowork-neoassist-nativas.md) | I-01, I-02, I-03, I-19, I-20 + IDs da conta | **P0** — destrava protocolo/transbordo |
 | 2 | [pacote-cowork-tray-a1.md](pacote-cowork-tray-a1.md) | I-04 (+ I-05/I-13) | **P0** — pós-compra A1 |
 | 3 | [pacote-cowork-pipefy.md](pacote-cowork-pipefy.md) | I-17 (Trade), I-21 (CX Casos) | P1 |
-| 4 | [pacote-cowork-representantes-parceiros.md](pacote-cowork-representantes-parceiros.md) | I-09 (A7), I-11 (A8) | P1 |
-| 5 | [pacote-cowork-afiliados.md](pacote-cowork-afiliados.md) | I-10 (A9) | P1 |
-| 6 | [pacote-cowork-jl-educa-calendario.md](pacote-cowork-jl-educa-calendario.md) | I-16 (A7 — JL Educa) | P2 |
-| 7 | [pacote-cowork-utilitarias.md](pacote-cowork-utilitarias.md) | I-05, I-12, I-13, I-15 | P2 |
+| 4 | [pacote-cowork-erp-crm-b2b.md](pacote-cowork-erp-crm-b2b.md) | I-07 (ERP), I-08 (CRM) — JL FIT/FTW | **P0/P1** — sustenta todo o B2B |
+| 5 | [pacote-cowork-representantes-parceiros.md](pacote-cowork-representantes-parceiros.md) | I-09 (A7), I-11 (A8) | P1 |
+| 6 | [pacote-cowork-afiliados.md](pacote-cowork-afiliados.md) | I-10 (A9) | P1 |
+| 7 | [pacote-cowork-jl-educa-calendario.md](pacote-cowork-jl-educa-calendario.md) | I-16 (A7 — JL Educa) | P2 |
+| 8 | [pacote-cowork-utilitarias.md](pacote-cowork-utilitarias.md) | I-05, I-12, I-13, I-15 | P2 |
 
-> Ainda **sem pacote** (dependem de definição interna, não de integração): ERP B2B (I-07) e CRM B2B (I-08) — quando o usuário indicar o sistema (JL FIT/FTW) e houver API, gerar um pacote específico, análogo ao de representantes/parceiros.
+> **Primeiro passo do pacote ERP/CRM**: descobrir com a TI da JL FIT/FTW qual é o ERP e o CRM e se há API — o pacote conduz essa descoberta antes do mapeamento.
 
 ## Regras comuns a todos os pacotes
 
