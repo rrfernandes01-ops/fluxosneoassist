@@ -67,6 +67,10 @@ docs/
 4. **Integrações**: conecte as APIs listadas em `03-integracoes.md`. Enquanto uma integração não estiver disponível, o fluxo usa o comportamento de contingência descrito no mesmo documento.
 5. **Filas de transbordo**: crie as filas humanas descritas em `05-transbordo-humano-e-filas.md` e vincule cada agente à sua fila.
 
+## Execução na plataforma (Claude Cowork)
+
+Como este ambiente não acessa a plataforma NeoAssist nem o navegador, a aplicação dos prompts e os testes ao vivo são feitos pelo **Claude Cowork** (roda no ambiente do usuário). O passo a passo pronto está em **[implantacao/pacote-cowork-atualizacao-agentes.md](implantacao/pacote-cowork-atualizacao-agentes.md)** e o roteiro de testes em **[implantacao/roteiro-de-testes-agentes.md](implantacao/roteiro-de-testes-agentes.md)**.
+
 ## Documentos de referência do projeto
 
 - Briefing "Projeto IA FTW no WhatsApp" (mensagem do solicitante).
