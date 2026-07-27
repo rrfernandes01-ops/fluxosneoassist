@@ -69,7 +69,10 @@ docs/
 
 ## Execução na plataforma (Claude Cowork)
 
-Como este ambiente não acessa a plataforma NeoAssist nem o navegador, a aplicação dos prompts e os testes ao vivo são feitos pelo **Claude Cowork** (roda no ambiente do usuário). O passo a passo pronto está em **[implantacao/pacote-cowork-atualizacao-agentes.md](implantacao/pacote-cowork-atualizacao-agentes.md)** e o roteiro de testes em **[implantacao/roteiro-de-testes-agentes.md](implantacao/roteiro-de-testes-agentes.md)**.
+Como este ambiente não acessa a plataforma NeoAssist nem o navegador, a aplicação dos prompts e os testes ao vivo são feitos pelo **Claude Cowork** (roda no ambiente do usuário). Pacotes prontos:
+
+- **[implantacao/pacote-cowork-atualizacao-agentes.md](implantacao/pacote-cowork-atualizacao-agentes.md)** — atualizar os 11 agentes e testar (+ [roteiro de testes](implantacao/roteiro-de-testes-agentes.md)).
+- **[implantacao/pacote-cowork-tray-a1.md](implantacao/pacote-cowork-tray-a1.md)** — ler a documentação da Tray (bloqueada neste ambiente) e preencher o contrato da integração I-04 do A1.
 
 ## Documentos de referência do projeto
 
