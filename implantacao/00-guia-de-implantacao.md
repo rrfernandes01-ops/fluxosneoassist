@@ -15,7 +15,7 @@ Este diretório contém os artefatos **prontos para colar** na plataforma NeoAss
 
 | Passo | O quê | Onde na NeoAssist | Artefatos |
 |-------|-------|-------------------|-----------|
-| 1 | Base de conhecimento | Base de conhecimento → novos artigos | `passo-1-base-conhecimento/` (6 artigos) |
+| 1 | Base de conhecimento | Base de conhecimento → novos artigos | `passo-1-base-conhecimento/` (7 artigos) |
 | 2 | Fluxo mestre | Automações → novo fluxo no canal WhatsApp | `passo-2-fluxo-mestre/construcao-no-a-no.md` |
 | 3 | Agentes de IA | Núb.ia Resolve → criar 11 agentes | `passo-3-agentes/prompt-A1.md` … `prompt-A11.md` |
 | 4 | Integrações | Integrações / APIs | `passo-4-integracoes/checklist-integracoes.md` |
@@ -24,7 +24,7 @@ Este diretório contém os artefatos **prontos para colar** na plataforma NeoAss
 ## Regras de montagem
 
 1. **Passo 1 antes do 3**: os agentes só respondem com base nos artigos oficiais; sem base publicada, os agentes devem ficar em rascunho.
-2. **Vincule os artigos 01–04 e 06 do passo 1 a TODOS os 11 agentes** (são a camada comum de comportamento). O **artigo 05 (Regras de tratativa por marketplace)** é vinculado ao agente **A3** (e opcionalmente ao A1, para redirecionamentos corretos).
+2. **Vincule os artigos 01–04 e 06 do passo 1 a TODOS os 11 agentes** (são a camada comum de comportamento). O **artigo 05 (Regras de tratativa por marketplace)** é vinculado ao agente **A3** (e opcionalmente ao A1). O **artigo 07 (Tabela Prazo x Valor 2026)** é vinculado ao agente **A7** (e opcionalmente A5/A6).
 3. **Passo 2 e 3 juntos**: o fluxo mestre termina em hand-off para os agentes; crie os agentes primeiro em rascunho, monte o fluxo, depois publique tudo junto.
 4. **Passo 4 é incremental**: cada integração conectada substitui o comportamento de contingência correspondente (documentado em `../docs/03-integracoes.md`). O fluxo funciona desde o dia 1 apenas com I-01/I-02/I-03; sem elas, use as contingências.
 5. **Passo 5 antes de publicar**: nenhum agente publicado sem sua fila de transbordo criada — transferência nunca é negada.
