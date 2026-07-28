@@ -7,7 +7,7 @@
 - [ ] Horário: **segunda a sexta, 9h–18h**.
 - [ ] Calendário de exceções: **feriados nacionais + feriados da cidade de São Paulo**.
 - [ ] Fora do horário: registrar protocolo + mensagem padrão do Artigo 04 (retorno até o fim do próximo dia útil).
-- [ ] Ticket de transbordo recebe automaticamente: perfil (A1–A10), variáveis coletadas, resumo da conversa e motivo (T1–T9).
+- [ ] Ticket de transbordo recebe automaticamente: perfil (A1–A11), variáveis coletadas, resumo da conversa e motivo (T1–T9).
 
 ## Filas a criar
 

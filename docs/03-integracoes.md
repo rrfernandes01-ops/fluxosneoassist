@@ -61,7 +61,7 @@ As documentações técnicas das integrações ainda serão fornecidas. Até lá
 
 ### I-01 — Consumidor por telefone
 - **Entrada**: telefone (E.164) do WhatsApp.
-- **Saída**: `encontrado (bool)`, `id_cliente`, `nome`, `documento_mascarado`, `perfil` (A1–A10 se já classificado), `consentimento_lgpd (bool, versão, data)`.
+- **Saída**: `encontrado (bool)`, `id_cliente`, `nome`, `documento_mascarado`, `perfil` (A1–A11 se já classificado), `consentimento_lgpd (bool, versão, data)`.
 - **Contingência**: tratar como cliente novo (subfluxo de cadastro do documento 02).
 
 ### I-02 — Histórico de protocolos

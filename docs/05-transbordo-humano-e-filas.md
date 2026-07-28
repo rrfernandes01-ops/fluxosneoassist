@@ -20,7 +20,7 @@ A transferência para atendente humano **faz parte do desenho do atendimento e n
 
 ### 2.1 Detalhamento do T9 (garantia universal)
 
-Este gatilho vale para **todos os agentes (A1–A10)**, em B2C, marketplace e B2B. A sequência obrigatória é:
+Este gatilho vale para **todos os agentes (A1–A11)**, em B2C, marketplace e B2B. A sequência obrigatória é:
 
 1. **Primeira opção — consultar a integração** disponível com o que o cliente conseguir informar (CPF, CNPJ, nº do pedido, código de rastreio, código de representante etc.).
 2. **Se a integração não retorna resposta** (dado não localizado, erro, timeout, integração ainda não conectada) ou **se o cliente não tem o dado em mãos** — situação esperada principalmente no B2B, onde quem fala nem sempre tem o número do pedido —, o agente faz **uma única tentativa** de ajudar (ex.: "consegue verificar no e-mail de confirmação?" ou oferecer busca por outro dado que a integração aceite).
@@ -101,4 +101,4 @@ Modelo:
 ## 6. Protocolo
 
 - Todo atendimento gera protocolo na NeoAssist; todo transbordo referencia o protocolo.
-- O protocolo carrega: perfil (A1–A10), variáveis coletadas, integrações consultadas, resumo da conversa e motivo do transbordo (T1–T9) — insumo para as métricas do documento 06.
+- O protocolo carrega: perfil (A1–A11), variáveis coletadas, integrações consultadas, resumo da conversa e motivo do transbordo (T1–T9) — insumo para as métricas do documento 06.

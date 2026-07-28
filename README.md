@@ -1,5 +1,7 @@
 # Projeto IA FTW no WhatsApp — Assistente de IA Fitoway (NeoAssist / Núb.ia Resolve)
 
+> 📋 **Status do projeto**: veja o [Painel de Acompanhamento](PAINEL-DE-ACOMPANHAMENTO.md) — o que está pronto, o que depende do Cowork e o que depende de material/decisão.
+
 Documentação completa do fluxo único de atendimento no canal oficial de WhatsApp do Grupo Fitoway — **Número Consumidor (11) 2388-3360** — construída para implantação na plataforma **NeoAssist**, com a IA generativa **Núb.ia Resolve**.
 
 ## Objetivo
@@ -60,11 +62,11 @@ docs/
 
 ## Como implantar na NeoAssist
 
-> **Pacote pronto para colar**: o diretório [`implantacao/`](implantacao/00-guia-de-implantacao.md) contém os artefatos finais de cada passo — artigos da base de conhecimento redigidos, fluxo mestre nó a nó com os textos exatos, prompts de configuração dos 10 agentes e checklists de integrações e filas. Comece pelo [guia de implantação](implantacao/00-guia-de-implantacao.md).
+> **Pacote pronto para colar**: o diretório [`implantacao/`](implantacao/00-guia-de-implantacao.md) contém os artefatos finais de cada passo — artigos da base de conhecimento redigidos, fluxo mestre nó a nó com os textos exatos, prompts de configuração dos 11 agentes e checklists de integrações e filas. Comece pelo [guia de implantação](implantacao/00-guia-de-implantacao.md).
 
 1. **Base de conhecimento**: cadastre o conteúdo de `01-identidade-e-regras-gerais.md` e `04-guardrails-globais-compliance.md` como artigos-base vinculados a todos os agentes da Núb.ia Resolve.
 2. **Fluxo de automação**: monte o fluxo de entrada do WhatsApp conforme `02-fluxo-mestre-triagem.md` (boas-vindas → identificação via integração de consumidor → consentimento LGPD → menu de triagem → roteamento).
-3. **Agentes**: crie um agente Núb.ia Resolve por perfil (A1 a A10), copiando de cada documento as seções *Persona*, *Escopo*, *Proibições*, *Guardrails* e *Fluxo conversacional*.
+3. **Agentes**: crie um agente Núb.ia Resolve por perfil (A1 a A11), copiando de cada documento as seções *Persona*, *Escopo*, *Proibições*, *Guardrails* e *Fluxo conversacional*.
 4. **Integrações**: conecte as APIs listadas em `03-integracoes.md`. Enquanto uma integração não estiver disponível, o fluxo usa o comportamento de contingência descrito no mesmo documento.
 5. **Filas de transbordo**: crie as filas humanas descritas em `05-transbordo-humano-e-filas.md` e vincule cada agente à sua fila.
 

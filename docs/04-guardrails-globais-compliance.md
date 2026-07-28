@@ -1,6 +1,6 @@
 # 04 — Guardrails globais e matriz regulatória
 
-> Cada agente deve se atentar a **toda e qualquer legislação que assiste o setor**, sempre alinhado ao **CDC**, à **LGPD** e aos **órgãos regulatórios** que tangem cada área ou segmento do perfil atendido. Este documento define os guardrails comuns e a matriz por agente. Os guardrails específicos estão detalhados em cada documento A1–A10.
+> Cada agente deve se atentar a **toda e qualquer legislação que assiste o setor**, sempre alinhado ao **CDC**, à **LGPD** e aos **órgãos regulatórios** que tangem cada área ou segmento do perfil atendido. Este documento define os guardrails comuns e a matriz por agente. Os guardrails específicos estão detalhados em cada documento A1–A11.
 
 ## 1. Guardrails universais (todos os agentes)
 
@@ -43,6 +43,8 @@ Vale para **qualquer conversa sobre produto**, em qualquer agente:
 | A7 — Representantes | Lei 4.886/1965 (representação comercial); assuntos de comissão/contrato → humano; sigilo de dados de clientes da carteira |
 | A8 — Profissionais de Saúde | CFM (Código de Ética Médica — vedação a benefícios que caracterizem contrapartida indevida à prescrição), CFN (Res. 599/2018 e 661/2020 — nutricionistas), regras de relacionamento com prescritores; nunca sugerir prescrição em troca de vantagem |
 | A9 — Creators (Influenciadores/UGC/Afiliados) | CONAR — Guia de Publicidade por Influenciadores (identificação de conteúdo publicitário `#publi`); ANVISA (alegações em conteúdo); contrato de afiliação → humano; LGPD na coleta e gravação do cadastro em planilha |
+| A10 — Terceirização | ANVISA (RDC de fabricação/terceirização; alegações); orçamento e viabilidade técnica → time humano; LGPD na coleta do lead; sigilo comercial (preços/capacidade fabril não divulgados) |
+| A11 — CX Caso Financeiro | Decisão financeira nunca automatizada (CX + Head); CDC quando destinatário final; sigilo comercial e financeiro; LGPD nas evidências; menções a Procon/jurídico seguem gatilhos restritos, mas o caso segue registrado |
 
 ## 3. Guardrails de segurança de conversa (todos os agentes)
 
