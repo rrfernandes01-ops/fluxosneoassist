@@ -43,7 +43,7 @@ Agrupados; marcar (**obrigatório**) os essenciais. Muitos vêm do A11/Workflow.
 - Causa raiz — categoria (**obrigatório**): Logística/Entrega · Comercial/Relacionamento · Financeiro · Trade Marketing · Outro
 - Descrição da causa raiz (**obrigatório**)
 - Tipo de decisão solicitada (**obrigatório**): Prorrogação de boleto · Isenção de frete · Cancelamento · Estorno · Devolução total · Devolução parcial · Bonificação · Crédito (próxima compra) · Negociação · **Condição fora da Tabela Prazo x Valor**
-- **Valor financeiro envolvido / impacto estimado (R$)** (**obrigatório** — base dos relatórios)
+- **Campos de cálculo do impacto financeiro** (obrigatórios conforme o tipo — ver **seção 5. Cálculo do impacto financeiro**): `Valor base (R$)`, `Valor concedido (R$)`, `Dias adicionais` e `Taxa financeira mensal (%)` (para prazo), `Custo do prazo (R$)` e **`Impacto financeiro total (R$)`** (**obrigatório** — base dos relatórios), `Memória de cálculo` (texto).
 - Sugestão de ação (do solicitante/CX) — *registrada, não aprovada*
 - Urgência / prazo
 
@@ -61,7 +61,56 @@ O card só avança da fase 2 com as evidências mínimas da sua causa:
 
 > Campo "Evidências completas?" (Sim/Não) como condição para avançar — evita caso mal instruído chegar ao Head.
 
-## 5. Gate de decisão do Head (fase 5)
+## 5. Cálculo do impacto financeiro (DESTAQUE — obrigatório em todo card)
+
+O **impacto financeiro** é o número que sustenta os relatórios à Diretoria/Sócios, então **cada card precisa calculá-lo de forma padronizada e com memória de cálculo**. A lógica **muda conforme o tipo de decisão**. Há dois componentes:
+
+- **(A) Valor concedido** — o dinheiro que a empresa deixa de receber ou desembolsa (frete, estorno, devolução, bonificação, crédito, desconto).
+- **(B) Custo do prazo** — quando a decisão é dar mais prazo (prorrogação/negociação de prazo), não há perda do principal, mas há **custo financeiro do capital parado**: `Valor base × Taxa financeira mensal × (Dias adicionais ÷ 30)`.
+
+**Impacto financeiro total (R$) = (A) + (B)**, conforme o tipo. É esse campo que alimenta os relatórios (seção 7).
+
+### 5.1 Fórmula por tipo de decisão
+
+| Tipo de decisão | Base de cálculo | Impacto financeiro (R$) |
+|-----------------|-----------------|--------------------------|
+| **Isenção de frete** | Valor do frete que a empresa absorve | = valor do frete isentado |
+| **Estorno** (total/parcial) | Valor devolvido ao cliente em dinheiro | = valor estornado |
+| **Devolução total** | Mercadoria que retorna | = **custo (CMV)** dos itens devolvidos + frete da logística reversa − valor recuperável (revenda) |
+| **Devolução parcial** | Itens devolvidos | = custo (CMV) dos itens devolvidos (proporcional) + reversa |
+| **Cancelamento** | Pedido não faturado | Se **já faturado** → tratar como estorno/devolução. Se **não faturado** → impacto de caixa = 0; registrar **receita não realizada** (referência) e custos incorridos (ex.: frete já pago) |
+| **Bonificação** | Produtos dados sem cobrança | = **custo (CMV)** dos itens bonificados (registrar também o valor de tabela como referência) |
+| **Crédito (próxima compra)** | Crédito concedido | = valor do crédito (provisão até ser usado) |
+| **Prorrogação de boleto** | Prazo adicional | = Valor base × Taxa financeira mensal × (Dias adicionais ÷ 30) — componente (B) |
+| **Negociação** | Desconto + prazo | = desconto concedido (A) **+** custo do prazo (B), quando houver ambos |
+| **Condição fora da Tabela** | Depende do que foi concedido | Aplicar a fórmula do efeito concedido (desconto, prazo, isenção…) |
+
+### 5.2 Convenção de valoração (decisão do Head — confirmar)
+
+- **Produtos dados/devolvidos** (bonificação, devolução) são valorados a **custo (CMV)** — é o impacto real no resultado. O **valor de tabela/venda** é registrado à parte, como referência.
+- **Saídas de caixa** (estorno, frete, crédito) são valoradas pelo **valor de face** (o que sai do caixa).
+- **Taxa financeira mensal** (para custo do prazo): parâmetro único definido pelo Financeiro/Head — **`[TAXA_FINANCEIRA_MENSAL]`** (ex.: custo de capital de giro ao mês). Deixar como campo/constante configurável no pipe.
+
+> Esses dois pontos são **decisão de negócio do Head/Financeiro**: confirmar (a) valorar giveaways a custo ou a venda e (b) a taxa financeira mensal. Enquanto não confirmado, usar custo (CMV) + taxa `[TAXA_FINANCEIRA_MENSAL]` como padrão e sinalizar.
+
+### 5.3 Campos no card (para o cálculo ser automático e auditável)
+
+- `Valor base (R$)` — valor do pedido/itens/frete conforme o tipo.
+- `Valor concedido (R$)` — componente (A).
+- `Dias adicionais` e `Taxa financeira mensal (%)` — para o componente (B).
+- `Custo do prazo (R$)` — calculado por fórmula (Pipefy: campo de fórmula ou preenchido pelo analista com a conta).
+- **`Impacto financeiro total (R$)`** — (A)+(B); **é o campo somado nos relatórios**.
+- `Valor de referência (tabela/venda) (R$)` — só referência, não entra no impacto.
+- `Memória de cálculo` (texto) — o analista descreve como chegou ao número (evidência/auditoria).
+
+### 5.4 Exemplos rápidos
+
+- **Isenção de frete** de R$ 80 → impacto = **R$ 80**.
+- **Bonificação** de 12 unidades com CMV R$ 15/un → impacto = **R$ 180** (valor de tabela R$ 360 fica como referência).
+- **Prorrogação** de R$ 5.000 por +30 dias, taxa 2%/mês → impacto = 5.000 × 0,02 × (30/30) = **R$ 100**.
+- **Devolução parcial**: 5 itens, CMV R$ 20/un + reversa R$ 30 → impacto = 100 + 30 = **R$ 130**.
+
+## 6. Gate de decisão do Head (fase 5)
 
 Campos preenchidos **pelo Head**:
 - **Decisão** (**obrigatório**): Aprovado · Aprovado com ajuste · Reprovado
@@ -72,14 +121,14 @@ Campos preenchidos **pelo Head**:
 
 Só após "Aprovado/Aprovado com ajuste" o card vai para **Execução**. "Reprovado" → fase Reprovado com justificativa e retorno ao solicitante.
 
-## 6. Rótulos, automações e responsáveis (facilitar a operação)
+## 7. Rótulos, automações e responsáveis (facilitar a operação)
 
 - **Etiquetas (labels)**: por tipo de decisão, por causa raiz, por urgência (alta/média/baixa).
 - **Responsável automático** por fase (analista CX na 1–4; Head na 5; Financeiro/Logística na 6).
 - **Automações**: mover card ao concluir checklist; **alertas de SLA** (prazo estourando); notificar o Head quando um card entra na fase 5; notificar o solicitante ao concluir/reprovar.
 - **Campos condicionais**: mostrar campos de logística só quando a causa é logística, etc.
 
-## 7. Relatórios de prestação de contas (conciso e assertivo)
+## 8. Relatórios de prestação de contas (conciso e assertivo)
 
 Configurar **dashboards/relatórios do Pipefy** (e/ou export para Sheets) com:
 
@@ -97,17 +146,18 @@ Configurar **dashboards/relatórios do Pipefy** (e/ou export para Sheets) com:
 
 > Todos os valores saem dos campos padronizados do card (valor/tipo/causa/decisão), então o relatório é gerado automaticamente — sem retrabalho.
 
-## 8. Ligação com a NeoAssist e o A11
+## 9. Ligação com a NeoAssist e o A11
 
 - O A11 abre protocolo → Workflow (`openWorkflow`) → **cria o card** no pipe com o start form preenchido (mapa de campos no pacote Cowork Pipefy).
 - Decisão e execução ficam no Pipefy; o **resultado** pode voltar ao protocolo NeoAssist (atualização) para fechar o ciclo com o cliente.
 - Enquanto o Workflow não estiver habilitado, o card é criado manualmente pelo CX a partir do protocolo (contingência).
 
-## 9. Checklist de construção (resumo)
+## 10. Checklist de construção (resumo)
 1. Criar o pipe com as **7 fases** (+ Reprovado).
-2. Montar o **start form** (seção 3) e os **campos por fase** (2, 4, 5).
+2. Montar o **start form** (seção 3) e os **campos por fase** (2, 4, gate 6).
 3. Configurar **checklist de evidências** (seção 4) e o campo "Evidências completas?".
-4. Configurar o **gate do Head** (seção 5).
-5. Criar **etiquetas, responsáveis, automações e alertas de SLA** (seção 6).
-6. Montar os **dashboards/relatórios** (seção 7).
-7. Testar com 2–3 casos fictícios ponta a ponta.
+4. Configurar os **campos e a fórmula de impacto financeiro** (seção 5) — campo `Impacto financeiro total (R$)` e `Memória de cálculo`.
+5. Configurar o **gate do Head** (seção 6).
+6. Criar **etiquetas, responsáveis, automações e alertas de SLA** (seção 7).
+7. Montar os **dashboards/relatórios** (seção 8), somando o `Impacto financeiro total`.
+8. Testar com 2–3 casos fictícios ponta a ponta, conferindo os cálculos.

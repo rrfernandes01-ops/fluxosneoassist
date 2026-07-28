@@ -18,7 +18,8 @@ Criar o pipe **"CX — Casos com Decisão Financeira"** com as fases (seção 2 
 Criar os campos da **seção 3** do blueprint, respeitando os **obrigatórios**. Tipos sugeridos:
 - Protocolo NeoAssist (texto curto, obrigatório), Data de abertura (data), Canal (select), Solicitante tipo (select) + nome (texto) + contato (texto).
 - Razão social (texto), CNPJ/CPF (texto), Comprador (texto), Pedido (texto), **Valor do pedido (número/currency)**, NF (texto), Boleto (texto + data de vencimento).
-- Causa raiz categoria (select), Descrição (texto longo), **Tipo de decisão solicitada (select** com as opções do blueprint, incluindo "Condição fora da Tabela Prazo x Valor"**)**, **Impacto financeiro estimado R$ (currency, obrigatório)**, Sugestão de ação (texto longo), Urgência (select), Evidências (attachment, múltiplos).
+- Causa raiz categoria (select), Descrição (texto longo), **Tipo de decisão solicitada (select** com as opções do blueprint, incluindo "Condição fora da Tabela Prazo x Valor"**)**, Sugestão de ação (texto longo), Urgência (select), Evidências (attachment, múltiplos).
+- **Campos de cálculo do impacto financeiro (seção 5 do blueprint — obrigatório e em destaque)**: `Valor base (R$)` (currency), `Valor concedido (R$)` (currency), `Dias adicionais` (número), `Taxa financeira mensal (%)` (número), `Custo do prazo (R$)` (fórmula: Valor base × Taxa/100 × Dias adicionais/30), **`Impacto financeiro total (R$)`** (fórmula/currency = Valor concedido + Custo do prazo — **obrigatório**, é o campo somado nos relatórios), `Valor de referência tabela/venda (R$)` (currency, só referência), `Memória de cálculo` (texto longo, obrigatório). Se o Pipefy permitir **campo de fórmula**, calcular `Custo do prazo` e `Impacto financeiro total` automaticamente; senão, o analista preenche seguindo a tabela da seção 5.1.
 
 ## 3. Campos por fase
 
@@ -27,6 +28,14 @@ Criar os campos da **seção 3** do blueprint, respeitando os **obrigatórios**.
 - **Fase 5 (Decisão do Head)**: **Decisão** (select: Aprovado / Aprovado com ajuste / Reprovado, obrigatório), Condição aprovada (texto), **Justificativa** (texto longo, obrigatório), Responsável (Head) + data. (Opcional) campo de alçada por valor.
 - **Fase 6 (Execução)**: Ação executada (select), Data da execução, Comprovante (attachment).
 - **Fase 7 (Concluído)**: Resultado (texto), Retorno ao cliente feito? (Sim/Não).
+
+## 3.1 Cálculo do impacto financeiro (obrigatório, seção 5 do blueprint)
+
+Deixar **evidente no formulário** (agrupar os campos sob o título "Impacto financeiro") a lógica por tipo de decisão:
+- **Valor concedido (A)**: frete isentado, valor estornado, CMV de bonificação/devolução + reversa, valor do crédito, desconto.
+- **Custo do prazo (B)** (prorrogação/negociação de prazo): `Valor base × Taxa mensal × (Dias adicionais ÷ 30)`.
+- **Impacto financeiro total = A + B** (campo somado nos relatórios).
+Valorar giveaways de produto a **custo (CMV)** e saídas de caixa pelo **valor de face**; a **taxa financeira mensal** é o parâmetro `[TAXA_FINANCEIRA_MENSAL]` a confirmar com o Head/Financeiro. Exigir sempre a **Memória de cálculo** preenchida.
 
 ## 4. Regras de avanço (fáceis para o analista)
 

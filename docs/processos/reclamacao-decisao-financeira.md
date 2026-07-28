@@ -83,6 +83,7 @@ Sistema · **Logística** · **Comercial** · **Financeiro/Faturamento** · **Ju
 - **Sugestão de ação**: pode vir do representante/supervisor, do cliente ou do próprio CX — é registrada **como sugestão**, nunca como aprovação.
 - **Decisão final**: **CX + Head (C-level)**. Nenhum agente de IA e nenhuma área isolada decide.
 - **Ações possíveis**: prorrogação de prazo de boleto · isenção de frete · cancelamento · estorno · devolução total ou parcial · bonificação · crédito (próxima compra) · negociação.
+- **Impacto financeiro de cada caso**: é sempre calculado e registrado no card, de forma padronizada por tipo de decisão (valor concedido + custo do prazo, com memória de cálculo) — metodologia na **seção 5 do blueprint** `pipefy-cx-financeiro-blueprint.md`. É esse número que alimenta a prestação de contas ao Financeiro/Diretoria/Sócios.
 - **Condições de pagamento fora da Tabela Prazo x Valor 2026**: também são decisão deste processo. A IA (A7) só oferece condições **dentro** da tabela (artigo 07); qualquer condição fora dela — prazo acima do limite da faixa, parcelamento não listado, valor abaixo do mínimo fora da exceção de introdução/mix — só é autorizada aqui, com **aval do Head + CX**.
 
 ## 7. Papel da IA vs. humano
