@@ -64,6 +64,7 @@ Todos com **Regra Anti-Espera** e **Silêncio Zero**.
 - LGPD por **transparência** (não gate de consentimento); opt-in só para marketing.
 - Tabela Prazo x Valor 2026 no A7; **exceções só via Caso CX (Pipefy) com aval do Head**.
 - Casos com decisão financeira: **decisão sempre CX + Head**; IA nunca decide.
+- Cálculo do impacto financeiro: tudo a **valor de venda** (sem CMV); custo do prazo com **taxa 2% a.m.** (ajustável pelo Financeiro).
 
 ## 6. Histórico de entregas (PRs mesclados)
 
