@@ -1,6 +1,6 @@
 # 02 — Fluxo mestre: entrada, identificação e triagem (Número Consumidor)
 
-> Este é o fluxo de automação principal a ser montado na NeoAssist para o canal WhatsApp **(11) 2388-3360**. Ele identifica quem está entrando em contato e roteia para o agente de IA do perfil correto (A1 a A10).
+> Este é o fluxo de automação principal a ser montado na NeoAssist para o canal WhatsApp **(11) 2388-3360**. Ele identifica quem está entrando em contato e roteia para o agente de IA do perfil correto (A1 a A11).
 
 ## 1. Visão geral do fluxo
 
@@ -152,6 +152,6 @@ Se durante o atendimento ficar claro que o usuário pertence a outro perfil (ex.
    - Não → subfluxo de cadastro (nome → CPF → aviso → link LGPD (I-03) → registro do aceite).
 5. **Entrada do usuário** (pergunta aberta) → **classificação de intenção Núb.ia**.
 6. **Condição**: confiança da intenção ≥ limiar? Se não → **menu interativo** de triagem.
-7. **Roteador** (switch por perfil) → **hand-off para o agente Núb.ia Resolve** do perfil (A1–A10), passando variáveis: nome, documento, perfil, protocolos recentes, resumo da triagem.
+7. **Roteador** (switch por perfil) → **hand-off para o agente Núb.ia Resolve** do perfil (A1–A11), passando variáveis: nome, documento, perfil, protocolos recentes, resumo da triagem.
 8. **Ramo de exceção**: assuntos restritos → fila humana correspondente (documento 05).
 9. **Pós-conversa**: gravação do perfil no cadastro, tag do assunto, pesquisa de resolução.
