@@ -43,7 +43,7 @@ Agrupados; marcar (**obrigatório**) os essenciais. Muitos vêm do A11/Workflow.
 - Causa raiz — categoria (**obrigatório**): Logística/Entrega · Comercial/Relacionamento · Financeiro · Trade Marketing · Outro
 - Descrição da causa raiz (**obrigatório**)
 - Tipo de decisão solicitada (**obrigatório**): Prorrogação de boleto · Isenção de frete · Cancelamento · Estorno · Devolução total · Devolução parcial · Bonificação · Crédito (próxima compra) · Negociação · **Condição fora da Tabela Prazo x Valor**
-- **Campos de cálculo do impacto financeiro** (obrigatórios conforme o tipo — ver **seção 5. Cálculo do impacto financeiro**): `Valor base (R$)`, `Valor concedido (R$)`, `Dias adicionais` e `Taxa financeira mensal (%)` (para prazo), `Custo do prazo (R$)` e **`Impacto financeiro total (R$)`** (**obrigatório** — base dos relatórios), `Memória de cálculo` (texto).
+- **Campos de cálculo do impacto financeiro** (obrigatórios conforme o tipo — ver **seção 5. Cálculo do impacto financeiro**): `Valor base (R$)`, `Valor concedido (R$)` (a valor de venda), `Dias adicionais` e `Taxa financeira mensal (%)` (para prazo; padrão 2% a.m.), `Custo do prazo (R$)` e **`Impacto financeiro total (R$)`** (**obrigatório** — base dos relatórios), `Memória de cálculo` (texto).
 - Sugestão de ação (do solicitante/CX) — *registrada, não aprovada*
 - Urgência / prazo
 
@@ -65,7 +65,7 @@ O card só avança da fase 2 com as evidências mínimas da sua causa:
 
 O **impacto financeiro** é o número que sustenta os relatórios à Diretoria/Sócios, então **cada card precisa calculá-lo de forma padronizada e com memória de cálculo**. A lógica **muda conforme o tipo de decisão**. Há dois componentes:
 
-- **(A) Valor concedido** — o dinheiro que a empresa deixa de receber ou desembolsa (frete, estorno, devolução, bonificação, crédito, desconto).
+- **(A) Valor concedido** — o dinheiro que a empresa deixa de receber ou desembolsa (frete, estorno, devolução, bonificação, crédito, desconto), sempre a **valor de venda** (a empresa não usa CMV neste processo).
 - **(B) Custo do prazo** — quando a decisão é dar mais prazo (prorrogação/negociação de prazo), não há perda do principal, mas há **custo financeiro do capital parado**: `Valor base × Taxa financeira mensal × (Dias adicionais ÷ 30)`.
 
 **Impacto financeiro total (R$) = (A) + (B)**, conforme o tipo. É esse campo que alimenta os relatórios (seção 7).
@@ -76,39 +76,37 @@ O **impacto financeiro** é o número que sustenta os relatórios à Diretoria/S
 |-----------------|-----------------|--------------------------|
 | **Isenção de frete** | Valor do frete que a empresa absorve | = valor do frete isentado |
 | **Estorno** (total/parcial) | Valor devolvido ao cliente em dinheiro | = valor estornado |
-| **Devolução total** | Mercadoria que retorna | = **custo (CMV)** dos itens devolvidos + frete da logística reversa − valor recuperável (revenda) |
-| **Devolução parcial** | Itens devolvidos | = custo (CMV) dos itens devolvidos (proporcional) + reversa |
+| **Devolução total** | Mercadoria que retorna | = **valor de venda** dos itens devolvidos + frete da logística reversa − valor recuperável (revenda) |
+| **Devolução parcial** | Itens devolvidos | = **valor de venda** dos itens devolvidos (proporcional) + reversa |
 | **Cancelamento** | Pedido não faturado | Se **já faturado** → tratar como estorno/devolução. Se **não faturado** → impacto de caixa = 0; registrar **receita não realizada** (referência) e custos incorridos (ex.: frete já pago) |
-| **Bonificação** | Produtos dados sem cobrança | = **custo (CMV)** dos itens bonificados (registrar também o valor de tabela como referência) |
+| **Bonificação** | Produtos dados sem cobrança | = **valor de venda** dos itens bonificados |
 | **Crédito (próxima compra)** | Crédito concedido | = valor do crédito (provisão até ser usado) |
 | **Prorrogação de boleto** | Prazo adicional | = Valor base × Taxa financeira mensal × (Dias adicionais ÷ 30) — componente (B) |
 | **Negociação** | Desconto + prazo | = desconto concedido (A) **+** custo do prazo (B), quando houver ambos |
 | **Condição fora da Tabela** | Depende do que foi concedido | Aplicar a fórmula do efeito concedido (desconto, prazo, isenção…) |
 
-### 5.2 Convenção de valoração (decisão do Head — confirmar)
+### 5.2 Convenção de valoração (definida pelo Head/Financeiro)
 
-- **Produtos dados/devolvidos** (bonificação, devolução) são valorados a **custo (CMV)** — é o impacto real no resultado. O **valor de tabela/venda** é registrado à parte, como referência.
-- **Saídas de caixa** (estorno, frete, crédito) são valoradas pelo **valor de face** (o que sai do caixa).
-- **Taxa financeira mensal** (para custo do prazo): parâmetro único definido pelo Financeiro/Head — **`[TAXA_FINANCEIRA_MENSAL]`** (ex.: custo de capital de giro ao mês). Deixar como campo/constante configurável no pipe.
+- **Produtos dados/devolvidos** (bonificação, devolução) e **saídas de caixa** (estorno, frete, crédito): tudo valorado a **valor de venda** — a empresa **não usa CMV** neste processo (decisão registrada).
+- **Taxa financeira mensal** (para o custo do prazo): **2% ao mês** como padrão conservador de mercado (custo de capital de giro). É um **parâmetro configurável** no pipe — o Head e o Financeiro ajustam ao longo do projeto sem mudar a metodologia. Manter como constante/campo `Taxa financeira mensal (%)` para facilitar a troca.
 
-> Esses dois pontos são **decisão de negócio do Head/Financeiro**: confirmar (a) valorar giveaways a custo ou a venda e (b) a taxa financeira mensal. Enquanto não confirmado, usar custo (CMV) + taxa `[TAXA_FINANCEIRA_MENSAL]` como padrão e sinalizar.
+> Convenções já decididas: valor de venda para tudo; taxa **2% a.m.** ajustável. Se o Financeiro definir outra taxa, basta alterar o parâmetro no pipe — os cálculos e relatórios seguem iguais.
 
 ### 5.3 Campos no card (para o cálculo ser automático e auditável)
 
 - `Valor base (R$)` — valor do pedido/itens/frete conforme o tipo.
 - `Valor concedido (R$)` — componente (A).
-- `Dias adicionais` e `Taxa financeira mensal (%)` — para o componente (B).
+- `Dias adicionais` e `Taxa financeira mensal (%)` — para o componente (B); a taxa vem do parâmetro padrão **2% a.m.** (ajustável).
 - `Custo do prazo (R$)` — calculado por fórmula (Pipefy: campo de fórmula ou preenchido pelo analista com a conta).
 - **`Impacto financeiro total (R$)`** — (A)+(B); **é o campo somado nos relatórios**.
-- `Valor de referência (tabela/venda) (R$)` — só referência, não entra no impacto.
 - `Memória de cálculo` (texto) — o analista descreve como chegou ao número (evidência/auditoria).
 
 ### 5.4 Exemplos rápidos
 
 - **Isenção de frete** de R$ 80 → impacto = **R$ 80**.
-- **Bonificação** de 12 unidades com CMV R$ 15/un → impacto = **R$ 180** (valor de tabela R$ 360 fica como referência).
+- **Bonificação** de 12 unidades a R$ 30/un (valor de venda) → impacto = **R$ 360**.
 - **Prorrogação** de R$ 5.000 por +30 dias, taxa 2%/mês → impacto = 5.000 × 0,02 × (30/30) = **R$ 100**.
-- **Devolução parcial**: 5 itens, CMV R$ 20/un + reversa R$ 30 → impacto = 100 + 30 = **R$ 130**.
+- **Devolução parcial**: 5 itens a R$ 40/un (venda) + reversa R$ 30 → impacto = 200 + 30 = **R$ 230**.
 
 ## 6. Gate de decisão do Head (fase 5)
 

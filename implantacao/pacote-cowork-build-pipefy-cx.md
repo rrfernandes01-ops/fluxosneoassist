@@ -19,7 +19,7 @@ Criar os campos da **seção 3** do blueprint, respeitando os **obrigatórios**.
 - Protocolo NeoAssist (texto curto, obrigatório), Data de abertura (data), Canal (select), Solicitante tipo (select) + nome (texto) + contato (texto).
 - Razão social (texto), CNPJ/CPF (texto), Comprador (texto), Pedido (texto), **Valor do pedido (número/currency)**, NF (texto), Boleto (texto + data de vencimento).
 - Causa raiz categoria (select), Descrição (texto longo), **Tipo de decisão solicitada (select** com as opções do blueprint, incluindo "Condição fora da Tabela Prazo x Valor"**)**, Sugestão de ação (texto longo), Urgência (select), Evidências (attachment, múltiplos).
-- **Campos de cálculo do impacto financeiro (seção 5 do blueprint — obrigatório e em destaque)**: `Valor base (R$)` (currency), `Valor concedido (R$)` (currency), `Dias adicionais` (número), `Taxa financeira mensal (%)` (número), `Custo do prazo (R$)` (fórmula: Valor base × Taxa/100 × Dias adicionais/30), **`Impacto financeiro total (R$)`** (fórmula/currency = Valor concedido + Custo do prazo — **obrigatório**, é o campo somado nos relatórios), `Valor de referência tabela/venda (R$)` (currency, só referência), `Memória de cálculo` (texto longo, obrigatório). Se o Pipefy permitir **campo de fórmula**, calcular `Custo do prazo` e `Impacto financeiro total` automaticamente; senão, o analista preenche seguindo a tabela da seção 5.1.
+- **Campos de cálculo do impacto financeiro (seção 5 do blueprint — obrigatório e em destaque)**: `Valor base (R$)` (currency), `Valor concedido (R$)` (currency, **a valor de venda** — a empresa não usa CMV), `Dias adicionais` (número), `Taxa financeira mensal (%)` (número, **padrão 2% a.m., ajustável**), `Custo do prazo (R$)` (fórmula: Valor base × Taxa/100 × Dias adicionais/30), **`Impacto financeiro total (R$)`** (fórmula/currency = Valor concedido + Custo do prazo — **obrigatório**, é o campo somado nos relatórios), `Memória de cálculo` (texto longo, obrigatório). Se o Pipefy permitir **campo de fórmula**, calcular `Custo do prazo` e `Impacto financeiro total` automaticamente; senão, o analista preenche seguindo a tabela da seção 5.1.
 
 ## 3. Campos por fase
 
@@ -35,7 +35,7 @@ Deixar **evidente no formulário** (agrupar os campos sob o título "Impacto fin
 - **Valor concedido (A)**: frete isentado, valor estornado, CMV de bonificação/devolução + reversa, valor do crédito, desconto.
 - **Custo do prazo (B)** (prorrogação/negociação de prazo): `Valor base × Taxa mensal × (Dias adicionais ÷ 30)`.
 - **Impacto financeiro total = A + B** (campo somado nos relatórios).
-Valorar giveaways de produto a **custo (CMV)** e saídas de caixa pelo **valor de face**; a **taxa financeira mensal** é o parâmetro `[TAXA_FINANCEIRA_MENSAL]` a confirmar com o Head/Financeiro. Exigir sempre a **Memória de cálculo** preenchida.
+Valorar tudo a **valor de venda** (a empresa não usa CMV); a **taxa financeira mensal** tem padrão **2% a.m.** (conservador, ajustável pelo Head/Financeiro — deixar como parâmetro configurável). Exigir sempre a **Memória de cálculo** preenchida.
 
 ## 4. Regras de avanço (fáceis para o analista)
 
