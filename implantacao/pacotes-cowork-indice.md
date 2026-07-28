@@ -16,6 +16,7 @@ Pacotes de instruções para o **Claude Cowork** executar no ambiente do usuári
 | 1 | [pacote-cowork-neoassist-nativas.md](pacote-cowork-neoassist-nativas.md) | I-01, I-02, I-03, I-19, I-20 + IDs da conta | **P0** — destrava protocolo/transbordo |
 | 2 | [pacote-cowork-tray-a1.md](pacote-cowork-tray-a1.md) | I-04 (+ I-05/I-13) | **P0** — pós-compra A1 |
 | 3 | [pacote-cowork-pipefy.md](pacote-cowork-pipefy.md) | I-17 (Trade), I-21 (CX Casos) | P1 |
+| 3b | [pacote-cowork-build-pipefy-cx.md](pacote-cowork-build-pipefy-cx.md) — **construir o pipe financeiro do CX do zero** (blueprint em `../docs/processos/pipefy-cx-financeiro-blueprint.md`) | I-21 | P1 |
 | 4 | [pacote-cowork-erp-crm-b2b.md](pacote-cowork-erp-crm-b2b.md) | I-07 (ERP), I-08 (CRM) — JL FIT/FTW | **P0/P1** — sustenta todo o B2B |
 | 5 | [pacote-cowork-representantes-parceiros.md](pacote-cowork-representantes-parceiros.md) | I-09 (A7), I-11 (A8) | P1 |
 | 6 | [pacote-cowork-afiliados.md](pacote-cowork-afiliados.md) | I-10 (A9) | P1 |
