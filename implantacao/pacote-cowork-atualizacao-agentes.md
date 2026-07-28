@@ -38,7 +38,7 @@ Para **cada** agente abaixo, abrir o agente na Núb.ia Resolve e **substituir as
 
 Para cada agente, ao colar:
 - Trocar `[Assistente de IA Fitoway]` pelo nome oficial da persona.
-- Conferir que o agente está vinculado aos artigos 01–04 e 06 (A3 também ao 05).
+- Conferir que o agente está vinculado aos artigos 01–04 e 06 (A3 também ao 05; **A7 também ao 07 — Tabela Prazo x Valor 2026**).
 - Conferir que a **fila de transbordo** do agente existe (ver passo 5 da implantação) e está vinculada. Se a fila não existir (ex.: **CX Casos**, **JL Educa**, **Trade Marketing**, **Terceirização**), criar antes de publicar.
 - Salvar.
 

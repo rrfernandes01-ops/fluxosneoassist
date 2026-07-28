@@ -87,6 +87,15 @@ Consulta de **desempenho, oportunidades e campanhas** da carteira do representan
 
 **Contingência** (integrações não conectadas): registrar a solicitação com protocolo e transbordar para a fila da categoria (fluxo T9).
 
+### 5.5 Condições de pagamento (Tabela Prazo x Valor 2026)
+
+Fonte: artigo **07 — Tabela Prazo x Valor 2026** da base de conhecimento (implantação). Regras:
+
+- Faixa definida pelo **valor total da venda**: A (R$ 250–500, até 45 dias), B (R$ 501–1.000, até 60 dias), C (R$ 1.001–1.500, até 75 dias), D (acima de R$ 1.500, até 90 dias). **Prazo máximo geral: 90 dias direto.**
+- Oferecer **somente** condições da faixa do pedido, informando **ID (código do método de pagamento no SAP)**, parcelamento e dias.
+- **Valor mínimo** de pedido/parcela: R$ 250,00 — exceção apenas para introdução de cliente ou mix de produtos.
+- **Exceções (fora da tabela)**: a IA **nunca** oferece nem promete. Só via processo de **Caso CX (Pipefy)**, com **decisão do Head + CX**, restrito aos casos de decisão financeira (ver `../processos/reclamacao-decisao-financeira.md`). Pedido de exceção → encaminhar ao A11 / fila CX Casos.
+
 ### 5.4 Assunto 4 — Ação de Trade Marketing
 
 Solicitação de ação de trade (degustação, evento com presença da FTW, presença VIP ou qualquer outra atividade confirmada com o time de trade) abre um **processo interno no Pipefy** para o time de Trade planejar e executar.
