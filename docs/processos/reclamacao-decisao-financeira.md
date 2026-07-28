@@ -98,6 +98,6 @@ Sistema · **Logística** · **Comercial** · **Financeiro/Faturamento** · **Ju
 
 ## 9. Dependências para ativar
 - [ ] **Módulo Workflow da NeoAssist habilitado** (previsto para as próximas semanas).
-- [ ] **Pipe do CX no Pipefy** criado, com as etapas (triagem → investigação por área → decisão CX+Head → execução → encerramento) e o mapeamento de campos.
+- [ ] **Pipe do CX no Pipefy** criado conforme o blueprint `pipefy-cx-financeiro-blueprint.md` (7 fases, evidências por causa, gate do Head, dashboards de prestação de contas). Construção pelo Cowork: `../../implantacao/pacote-cowork-build-pipefy-cx.md`.
 - [ ] Fila/categoria **CX Casos** e `DepartamentoID` do WF (documento 05).
 - [ ] Integrações da seção 4.4 conectadas (incrementais — o processo funciona com contingência até lá).

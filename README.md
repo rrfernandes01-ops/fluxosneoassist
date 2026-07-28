@@ -39,7 +39,8 @@ docs/
 │   ├── neoassist-protocolo-historico-status.md
 │   └── tray-ecommerce-a1.md
 ├── processos/
-│   └── reclamacao-decisao-financeira.md  # Processo CX → Workflow → Pipefy (decisão CX + Head)
+│   ├── reclamacao-decisao-financeira.md  # Processo CX → Workflow → Pipefy (decisão CX + Head)
+│   └── pipefy-cx-financeiro-blueprint.md # Blueprint do pipe financeiro do CX (fases, evidências, gate do Head, relatórios)
 ├── lgpd/
 │   ├── aviso-de-privacidade-whatsapp-ftw.md              # Texto público (minuta p/ validação jurídica/DPO)
 │   └── lgpd-operacional-consentimento-ropa-direitos.md   # Consentimento, ROPA e direitos do titular
