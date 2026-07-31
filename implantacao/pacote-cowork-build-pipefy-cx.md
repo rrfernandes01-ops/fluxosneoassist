@@ -1,6 +1,10 @@
-# Pacote Cowork — Construir o Pipe Financeiro do CX no Pipefy (ponta a ponta)
+# Pacote Cowork — Construir/Auditar o Pipe Financeiro do CX no Pipefy (ponta a ponta)
 
-> **Para o Claude Cowork** (ambiente do usuário, com o navegador e o **Pipefy logado**). Objetivo: **construir do zero**, no Pipefy, o pipe **"CX — Casos com Decisão Financeira"**, seguindo o blueprint `docs/processos/pipefy-cx-financeiro-blueprint.md` do repositório `rrfernandes01-ops/fluxosneoassist` (branch `main`). Deve ficar **fácil para os analistas operarem**, **forte em evidências**, com o **gate de validação do Head** e **relatórios de prestação de contas**.
+> **ATUALIZAÇÃO**: o pipe **já foi criado** — https://app.pipefy.com/pipes/307229758 (registrado em `docs/integracoes/pipefy-cx.md`). O trabalho do Cowork agora é **auditar** o pipe existente contra o blueprint abaixo (fases, campos, checklist de evidências, gate do Head, dashboards) e **completar o que faltar**, em vez de construir do zero. Se alguma seção já estiver implementada, pule para a próxima; se estiver parcial ou ausente, complete.
+
+> **Para o Claude Cowork** (ambiente do usuário, com o navegador e o **Pipefy logado**, pipe `307229758` já aberto). Objetivo: **auditar e completar**, no Pipefy, o pipe **"CX — Casos com Decisão Financeira"**, seguindo o blueprint `docs/processos/pipefy-cx-financeiro-blueprint.md` do repositório `rrfernandes01-ops/fluxosneoassist` (branch `main`). Deve ficar **fácil para os analistas operarem**, **forte em evidências**, com o **gate de validação do Head** e **relatórios de prestação de contas**.
+>
+> **Atenção especial** (pedido explícito do Head): o pipe recebe casos vindos do representante (A7, em nome do cliente) e diretamente do cliente B2B (A5/A6). Ao revisar o start form, confirme que os campos de evidência de pagamento distinguem **B2B (sempre tem boleto/título — obrigatório)** de **B2C (majoritariamente cartão/Pix — boleto só quando aplicável)**, para o analista não pedir dado que não existe.
 
 ## 0. Pré-requisitos
 

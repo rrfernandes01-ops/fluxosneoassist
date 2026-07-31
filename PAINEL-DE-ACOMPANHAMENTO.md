@@ -34,7 +34,7 @@ Todos com **Regra Anti-Espera** e **Silêncio Zero**.
 | IDs/chaves NeoAssist (destrava protocolo/WF) | `implantacao/pacote-cowork-neoassist-nativas.md` | ⏳ **P0** |
 | Integração Tray (I-04) | `implantacao/pacote-cowork-tray-a1.md` | ⏳ **P0** |
 | ERP/CRM B2B JL FIT (I-07/08) | `implantacao/pacote-cowork-erp-crm-b2b.md` | ⏳ descoberta |
-| Construir pipe financeiro do CX | `implantacao/pacote-cowork-build-pipefy-cx.md` | ⏳ a construir |
+| Auditar/completar pipe financeiro do CX (pipe já criado: [307229758](https://app.pipefy.com/pipes/307229758)) | `implantacao/pacote-cowork-build-pipefy-cx.md` | ⏳ auditar contra o blueprint + mapear field_ids |
 | Pipefy Trade + CX (I-17/21) | `implantacao/pacote-cowork-pipefy.md` | ⏳ |
 | Representantes/Parceiros (I-09/11) | `implantacao/pacote-cowork-representantes-parceiros.md` | ⏳ |
 | Afiliados (I-10) | `implantacao/pacote-cowork-afiliados.md` | ⏳ |
@@ -54,7 +54,8 @@ Todos com **Regra Anti-Espera** e **Silêncio Zero**.
 | **Sistema ERP/CRM da JL FIT** | Você indicar | Preenche pacote I-07/08 |
 | **Regulamento do programa de afiliados** | Marketing | Artigo da base (A9) |
 | **FAQ atualizada de terceirização** | Time terceirização | Artigo da base (A10) |
-| **Estrutura dos pipes Pipefy** (Trade e CX) | Após construção | Mapeamento `pipe_id`/`field_id` |
+| **Estrutura do pipe Pipefy Trade** | Após construção | Mapeamento `pipe_id`/`field_id` |
+| **Field_ids do pipe Pipefy CX** (pipe_id `307229758` já registrado em `docs/integracoes/pipefy-cx.md`) | Cowork auditar o pipe existente | Completa o mapeamento de campos |
 
 ## 5. Decisões de negócio já registradas
 
@@ -65,10 +66,14 @@ Todos com **Regra Anti-Espera** e **Silêncio Zero**.
 - Tabela Prazo x Valor 2026 no A7; **exceções só via Caso CX (Pipefy) com aval do Head**.
 - Casos com decisão financeira: **decisão sempre CX + Head**; IA nunca decide.
 - Cálculo do impacto financeiro: tudo a **valor de venda** (sem CMV); custo do prazo com **taxa 2% a.m.** (ajustável pelo Financeiro).
+- **Representante (A7) fica livre para vender**: cancelamento, estorno, prorrogação de boleto, troca, devolução e negociação são sempre absorvidos pelo CX (submenu dedicado no A7, roteando ao pipe CX). Cliente B2B (farma, alimentar, varejo, BodyShop, canal verde) que contatar diretamente pelos agentes A5/A6 com o mesmo tipo de pedido segue a mesma esteira.
+- Evidência de pagamento no intake do CX: **B2B sempre tem boleto/título** (pedir); **B2C majoritariamente cartão/Pix** (confirmar forma de pagamento via ERP/Tray antes de pedir boleto — não pedir se não existir).
+- **Transbordos apenas para filas filhas de 611808 FTW > Whatsapp** na NeoAssist; toda transferência para humano é sempre comunicada explicitamente ao usuário (nunca some da conversa sem avisar).
+- Tom de voz: nunca passivo-agressivo em nenhum dos 11 agentes (regra central no Artigo 02) — a assistente sempre assume a ação de ajudar, nunca cobra ou corrige o usuário.
 
 ## 6. Histórico de entregas (PRs mesclados)
 
-Documentação-base → pacote de implantação → marketplace → T9/silêncio → placeholders/identificação → LGPD → A7 (CX/JL Educa) → A10 → A9 Creators → Sheets → APIs NeoAssist → processo Caso CX/A11 → Regra Anti-Espera → pacotes Cowork (todas as integrações) → Tabela Prazo x Valor → blueprint Pipefy CX.
+Documentação-base → pacote de implantação → marketplace → T9/silêncio → placeholders/identificação → LGPD → A7 (CX/JL Educa) → A10 → A9 Creators → Sheets → APIs NeoAssist → processo Caso CX/A11 → Regra Anti-Espera → pacotes Cowork (todas as integrações) → Tabela Prazo x Valor → blueprint Pipefy CX → fluxo mestre: reinício de triagem (N22) + transbordo em 3 partes + regra de filas (611808) → A7 submenu CX (cancelamento/estorno/prorrogação) + registro do pipe CX (`307229758`) + evidência B2B x B2C (boleto) + tom de voz global (fim do passivo-agressivo).
 
 ## 7. Próximos passos sugeridos (ordem)
 

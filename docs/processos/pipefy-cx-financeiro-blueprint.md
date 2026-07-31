@@ -146,6 +146,7 @@ Configurar **dashboards/relatórios do Pipefy** (e/ou export para Sheets) com:
 
 ## 9. Ligação com a NeoAssist e o A11
 
+- **Pipe já criado**: "CX — Casos com Decisão Financeira", `https://app.pipefy.com/pipes/307229758`. Próximo passo do Cowork: auditar o pipe existente contra este blueprint (fases, campos do start form, checklist de evidências, gate do Head, dashboards) e reportar `pipe_id`/`field_ids` para registro em `../integracoes/pipefy-cx.md`.
 - O A11 abre protocolo → Workflow (`openWorkflow`) → **cria o card** no pipe com o start form preenchido (mapa de campos no pacote Cowork Pipefy).
 - Decisão e execução ficam no Pipefy; o **resultado** pode voltar ao protocolo NeoAssist (atualização) para fechar o ciclo com o cliente.
 - Enquanto o Workflow não estiver habilitado, o card é criado manualmente pelo CX a partir do protocolo (contingência).

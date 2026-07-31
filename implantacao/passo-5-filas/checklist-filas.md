@@ -4,6 +4,7 @@
 
 ## Configuração geral (todas as filas)
 
+- [ ] **Categoria pai obrigatória**: TODAS as filas abaixo devem ser criadas como subcategoria de **611808 FTW > Whatsapp** na NeoAssist. Nenhum transbordo pode apontar para fila fora dessa categoria — validar isso na configuração de cada agente antes do go-live.
 - [ ] Horário: **segunda a sexta, 9h–18h**.
 - [ ] Calendário de exceções: **feriados nacionais + feriados da cidade de São Paulo**.
 - [ ] Fora do horário: registrar protocolo + mensagem padrão do Artigo 04 (retorno até o fim do próximo dia útil).

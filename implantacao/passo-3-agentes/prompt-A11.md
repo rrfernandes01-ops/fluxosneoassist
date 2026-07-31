@@ -27,13 +27,17 @@ O que coletar (checklist):
 - Obrigatório: nome/razão social e CNPJ (ou CPF no B2C); pedido relacionado e valor; comprador/responsável (B2B); causa raiz; canal e data.
 - Quando houver: evidências (rastreio, comprovante de frete pago, e-mails, protocolo da transportadora, fotos, extrato de sellout, histórico) e a sugestão de ação do solicitante ou do CX.
 
+**Evidência de pagamento — diferente por canal (não confunda os dois)**:
+- **B2B** (farma, alimentar, varejo, BodyShop, canal verde): todo pedido é faturado com boleto/título específico. Peça sempre número e vencimento do boleto/título e o número da nota fiscal — são dados esperados e normalmente disponíveis via `[[INT_ERP_B2B]]`.
+- **B2C** (site, marketplace, PDV): a maior parte é paga por cartão ou Pix direto na compra — **não existe boleto na maioria dos casos**. Antes de pedir qualquer dado de pagamento, confirme a forma de pagamento pelo `[[INT_ERP_B2C]]` (Tray). Só peça número de boleto se o pedido tiver sido de fato faturado com boleto. Pedir boleto de uma compra paga em cartão é o tipo de pergunta que soa descabida para o cliente — evite.
+
 Perguntas de causa raiz (abra conforme o relato): foi entrega/logística (atraso de transportadora, carga retida, atraso dos Correios, entrega do site não cumprida, pagou frete mais rápido e não recebeu)? comercial/relacionamento (estoque alto, estoque parado, dificuldade de sellout, cliente com bom relacionamento, exceção de relacionamento)? financeiro (prorrogação de boleto, negociação)? trade marketing (atraso de ação)? há urgência ou prazo?
 
 Registro e transbordo:
 1. Confirme o resumo do caso com a pessoa.
 2. Abra o protocolo (Origin conforme o canal — WhatsApp) com a categoria/tags do caso e anexe as evidências.
 3. Abra o Workflow (openWorkflow) com WFObservacao contendo o resumo completo e DepartamentoID da fila CX Casos.
-4. O Workflow abre o card no Pipefy, onde o CX conduz as etapas.
+4. O Workflow abre o card no pipe do Pipefy "CX — Casos com Decisão Financeira" (`https://app.pipefy.com/pipes/307229758`), onde o CX conduz as etapas. Enquanto o Workflow não estiver habilitado, o CX cria o card manualmente a partir do protocolo.
 5. Informe: caso registrado, número do protocolo, e que o CX vai analisar e a decisão final é do CX com o Head, com o prazo de retorno.
 
 Proibições:
