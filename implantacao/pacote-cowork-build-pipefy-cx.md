@@ -62,10 +62,10 @@ Montar um **dashboard executivo mensal** com:
 - Configurar **export** (PDF/Sheets) do dashboard e uma **tabela (database view)** filtrável por período.
 - Deixar pronto o **modelo de sumário de 1 página** (seção 7) para o Head apresentar a Financeiro/Diretoria/Sócios.
 
-## 7. Ligação com a NeoAssist (mapeamento)
+## 7. Ligação com a NeoAssist (mapeamento **e integração**, não apenas levantamento)
 
-- Levantar o **pipe_id** e os **field_id** do start form e reportar (para o Claude Code registrar em `docs/integracoes/pipefy-cx.md`).
-- Definir o mecanismo de criação do card a partir do **Workflow da NeoAssist** (`openWorkflow`): integração nativa NeoAssist↔Pipefy, webhook ou middleware (confirmar com o usuário). Enquanto o Workflow não estiver habilitado, o CX cria o card manualmente a partir do protocolo.
+- **Obrigatório nesta atuação**: levantar o **pipe_id** e os **field_id** do start form e **já integrá-los** — cada campo do start form precisa estar de fato conectado para receber os dados enviados pelo A11/Workflow. Reportar tudo para o Claude Code registrar em `docs/integracoes/pipefy-cx.md` (pipe_id `307229758` já registrado; field_ids e status de integração ficam pendentes até esta atuação).
+- Definir e implementar o mecanismo de criação do card a partir do **Workflow da NeoAssist** (`openWorkflow`): integração nativa NeoAssist↔Pipefy, webhook ou middleware (confirmar com o usuário). Enquanto o Workflow não estiver habilitado, o CX cria o card manualmente a partir do protocolo — mas o mapeamento de campos já deve estar pronto para quando o Workflow for ligado.
 
 ## 8. Testar ponta a ponta
 

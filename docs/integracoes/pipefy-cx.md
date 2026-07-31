@@ -8,7 +8,7 @@
 - **URL**: https://app.pipefy.com/pipes/307229758
 - **pipe_id**: `307229758`
 - **Cobertura**: B2B e B2C. Entradas típicas: A1 (B2C, site), A5/A6 (B2B direto, farma/alimentar/varejo/BodyShop/canal verde), A7 (representante em nome do cliente), e-mail, telefone.
-- **field_ids do start form**: pendente — a mapear pelo Cowork ao auditar o pipe contra o blueprint (seção 3 e seção 5 do blueprint). Reportar aqui assim que levantado.
+- **field_ids do start form**: pendente. **Na próxima atuação do Cowork neste pipe, os field_ids devem ser mapeados E JÁ INTEGRADOS** (conexão real NeoAssist ↔ Pipefy funcionando — não apenas levantados/reportados em texto) — ver seção "Pendências" abaixo.
 
 ## Objetivo de negócio
 
@@ -19,8 +19,9 @@ Centralizar no CX toda questão comercial de pós-venda (cancelamento, estorno, 
 - **B2B**: pedido sempre faturado com boleto/título específico — coletar número e vencimento do boleto/título e da nota fiscal é esperado.
 - **B2C**: majoritariamente pago por cartão ou Pix direto na compra — não pedir boleto sem antes confirmar a forma de pagamento pela integração do ERP (Tray, I-04). Pedir boleto de compra em cartão é fricção desnecessária.
 
-## Pendências
+## Pendências (próxima atuação do Cowork — não deixar para depois)
 
-- [ ] Cowork: auditar o pipe existente contra o blueprint (fases, start form, checklist de evidências, gate do Head, dashboards) e reportar ajustes necessários.
-- [ ] Mapear e registrar os `field_ids` do start form.
-- [ ] Definir o mecanismo de criação do card a partir do Workflow da NeoAssist (nativo, webhook ou middleware) — enquanto o Workflow não estiver habilitado, o CX cria o card manualmente a partir do protocolo.
+- [ ] Auditar o pipe existente contra o blueprint (fases, start form, checklist de evidências, gate do Head, dashboards) e completar o que faltar.
+- [ ] **Mapear os `field_ids` do start form E integrá-los** — a integração real (não só o levantamento) é obrigatória nesta atuação: cada campo do start form precisa estar de fato conectado para receber os dados enviados pelo A11/Workflow.
+- [ ] Definir e implementar o mecanismo de criação do card a partir do Workflow da NeoAssist (nativo, webhook ou middleware) — enquanto o Workflow não estiver habilitado, o CX cria o card manualmente a partir do protocolo, mas o mapeamento de campos já deve estar pronto para quando o Workflow for ligado.
+- [ ] Atualizar este documento com os `field_ids` reais e o status da integração assim que concluída.
