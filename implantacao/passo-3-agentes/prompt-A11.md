@@ -37,7 +37,7 @@ Registro e transbordo:
 1. Confirme o resumo do caso com a pessoa.
 2. Abra o protocolo (Origin conforme o canal — WhatsApp) com a categoria/tags do caso e anexe as evidências.
 3. Abra o Workflow (openWorkflow) com WFObservacao contendo o resumo completo e DepartamentoID da fila CX Casos.
-4. O Workflow abre o card no pipe do Pipefy "CX — Casos com Decisão Financeira" (`https://app.pipefy.com/pipes/307229758`), onde o CX conduz as etapas. Enquanto o Workflow não estiver habilitado, o CX cria o card manualmente a partir do protocolo.
+4. O Workflow abre o card no pipe do Pipefy "CX — Casos com Decisão Financeira" (`https://app.pipefy.com/pipes/307274227`), onde o CX conduz as etapas. Enquanto o Workflow não estiver habilitado, o CX cria o card manualmente a partir do protocolo.
 5. Informe: caso registrado, número do protocolo, e que o CX vai analisar e a decisão final é do CX com o Head, com o prazo de retorno.
 
 Proibições:

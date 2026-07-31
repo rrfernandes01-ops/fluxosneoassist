@@ -2,7 +2,7 @@
 
 > Processo transversal de tratamento de reclamações e solicitações que, além do relacionamento, exigem uma **decisão financeira** (prorrogação de boleto, isenção de frete, cancelamento, estorno, devolução total/parcial, bonificação, crédito, negociação).
 >
-> **Status de plataforma**: usa o **módulo Workflow (WF) da NeoAssist**, que **ainda não está habilitado** (previsão: próximas semanas). A documentação já deixa o processo pronto para configurar quando o WF for ativado. Integração com **Pipefy** para o painel de etapas do CX (placeholder `[[INT_PIPEFY_CX]]`, I-21) — **pipe já criado**: "CX — Casos com Decisão Financeira", `https://app.pipefy.com/pipes/307229758` (field_ids a mapear pelo Cowork, conforme `../../implantacao/pacote-cowork-build-pipefy-cx.md`).
+> **Status de plataforma**: usa o **módulo Workflow (WF) da NeoAssist**, que **ainda não está habilitado** (previsão: próximas semanas). A documentação já deixa o processo pronto para configurar quando o WF for ativado. Integração com **Pipefy** para o painel de etapas do CX (placeholder `[[INT_PIPEFY_CX]]`, I-21) — **pipe já criado**: "CX — Casos com Decisão Financeira", `https://app.pipefy.com/pipes/307274227` (field_ids a mapear pelo Cowork, conforme `../../implantacao/pacote-cowork-build-pipefy-cx.md`).
 >
 > **Objetivo de negócio**: liberar os representantes comerciais (A7) para vender — toda questão comercial de pós-venda (cancelamento, estorno, prorrogação de boleto, troca, devolução, negociação) é absorvida pelo CX através deste processo, seja ela levantada pelo representante em nome do cliente ou pelo próprio cliente B2B diretamente (A5/A6).
 

@@ -1,8 +1,8 @@
 # Pacote Cowork — Construir/Auditar o Pipe Financeiro do CX no Pipefy (ponta a ponta)
 
-> **ATUALIZAÇÃO**: o pipe **já foi criado** — https://app.pipefy.com/pipes/307229758 (registrado em `docs/integracoes/pipefy-cx.md`). O trabalho do Cowork agora é **auditar** o pipe existente contra o blueprint abaixo (fases, campos, checklist de evidências, gate do Head, dashboards) e **completar o que faltar**, em vez de construir do zero. Se alguma seção já estiver implementada, pule para a próxima; se estiver parcial ou ausente, complete.
+> **ATUALIZAÇÃO**: o pipe **já foi criado** — https://app.pipefy.com/pipes/307274227 (registrado em `docs/integracoes/pipefy-cx.md`). O trabalho do Cowork agora é **auditar** o pipe existente contra o blueprint abaixo (fases, campos, checklist de evidências, gate do Head, dashboards) e **completar o que faltar**, em vez de construir do zero. Se alguma seção já estiver implementada, pule para a próxima; se estiver parcial ou ausente, complete.
 
-> **Para o Claude Cowork** (ambiente do usuário, com o navegador e o **Pipefy logado**, pipe `307229758` já aberto). Objetivo: **auditar e completar**, no Pipefy, o pipe **"CX — Casos com Decisão Financeira"**, seguindo o blueprint `docs/processos/pipefy-cx-financeiro-blueprint.md` do repositório `rrfernandes01-ops/fluxosneoassist` (branch `main`). Deve ficar **fácil para os analistas operarem**, **forte em evidências**, com o **gate de validação do Head** e **relatórios de prestação de contas**.
+> **Para o Claude Cowork** (ambiente do usuário, com o navegador e o **Pipefy logado**, pipe `307274227` já aberto). Objetivo: **auditar e completar**, no Pipefy, o pipe **"CX — Casos com Decisão Financeira"**, seguindo o blueprint `docs/processos/pipefy-cx-financeiro-blueprint.md` do repositório `rrfernandes01-ops/fluxosneoassist` (branch `main`). Deve ficar **fácil para os analistas operarem**, **forte em evidências**, com o **gate de validação do Head** e **relatórios de prestação de contas**.
 >
 > **Atenção especial** (pedido explícito do Head): o pipe recebe casos vindos do representante (A7, em nome do cliente) e diretamente do cliente B2B (A5/A6). Ao revisar o start form, confirme que os campos de evidência de pagamento distinguem **B2B (sempre tem boleto/título — obrigatório)** de **B2C (majoritariamente cartão/Pix — boleto só quando aplicável)**, para o analista não pedir dado que não existe.
 
@@ -64,7 +64,7 @@ Montar um **dashboard executivo mensal** com:
 
 ## 7. Ligação com a NeoAssist (mapeamento **e integração**, não apenas levantamento)
 
-- **Obrigatório nesta atuação**: levantar o **pipe_id** e os **field_id** do start form e **já integrá-los** — cada campo do start form precisa estar de fato conectado para receber os dados enviados pelo A11/Workflow. Reportar tudo para o Claude Code registrar em `docs/integracoes/pipefy-cx.md` (pipe_id `307229758` já registrado; field_ids e status de integração ficam pendentes até esta atuação).
+- **Obrigatório nesta atuação**: levantar o **pipe_id** e os **field_id** do start form e **já integrá-los** — cada campo do start form precisa estar de fato conectado para receber os dados enviados pelo A11/Workflow. Reportar tudo para o Claude Code registrar em `docs/integracoes/pipefy-cx.md` (pipe_id `307274227` já registrado; field_ids e status de integração ficam pendentes até esta atuação).
 - Definir e implementar o mecanismo de criação do card a partir do **Workflow da NeoAssist** (`openWorkflow`): integração nativa NeoAssist↔Pipefy, webhook ou middleware (confirmar com o usuário). Enquanto o Workflow não estiver habilitado, o CX cria o card manualmente a partir do protocolo — mas o mapeamento de campos já deve estar pronto para quando o Workflow for ligado.
 
 ## 8. Testar ponta a ponta

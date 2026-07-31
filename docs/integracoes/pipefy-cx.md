@@ -5,8 +5,8 @@
 ## Pipe
 
 - **Nome**: CX — Casos com Decisão Financeira
-- **URL**: https://app.pipefy.com/pipes/307229758
-- **pipe_id**: `307229758`
+- **URL**: https://app.pipefy.com/pipes/307274227
+- **pipe_id**: `307274227`
 - **Cobertura**: B2B e B2C. Entradas típicas: A1 (B2C, site), A5/A6 (B2B direto, farma/alimentar/varejo/BodyShop/canal verde), A7 (representante em nome do cliente), e-mail, telefone.
 - **field_ids do start form**: pendente. **Na próxima atuação do Cowork neste pipe, os field_ids devem ser mapeados E JÁ INTEGRADOS** (conexão real NeoAssist ↔ Pipefy funcionando — não apenas levantados/reportados em texto) — ver seção "Pendências" abaixo.
 
