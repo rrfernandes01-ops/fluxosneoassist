@@ -30,8 +30,9 @@ Todos com **Regra Anti-Espera** e **Silêncio Zero**.
 
 | Item | Pacote | Status |
 |------|--------|--------|
-| **Auditar nós nativos do fluxo (CPF/CNPJ, salvar variável, vincular consumidor, atribuir categoria) e reconstruir o fluxo mestre com eles** | `implantacao/pacote-cowork-auditoria-nos-fluxo.md` | ⏳ **fazer antes dos demais** |
-| Atualizar os 11 agentes + testar | `implantacao/pacote-cowork-atualizacao-agentes.md` | ⏳ a executar |
+| **Versão enxuta para a demo desta semana** (11 agentes + N22 + transbordo em 3 partes + filas, sem auditoria profunda) | `implantacao/pacote-cowork-prioridade-semana-diretoria.md` | ⏳ **rodar primeiro, esta semana** |
+| Auditar nós nativos do fluxo (CPF/CNPJ, salvar variável, vincular consumidor, atribuir categoria) e reconstruir o fluxo mestre com eles | `implantacao/pacote-cowork-auditoria-nos-fluxo.md` | ⏳ depois da apresentação |
+| Atualizar os 11 agentes + testar (versão completa, sem pressa) | `implantacao/pacote-cowork-atualizacao-agentes.md` | ⏳ a executar |
 | IDs/chaves NeoAssist (destrava protocolo/WF) | `implantacao/pacote-cowork-neoassist-nativas.md` | ⏳ **P0** |
 | Integração Tray (I-04) | `implantacao/pacote-cowork-tray-a1.md` | ⏳ **P0** |
 | ERP/CRM B2B JL FIT (I-07/08) | `implantacao/pacote-cowork-erp-crm-b2b.md` | ⏳ descoberta |
