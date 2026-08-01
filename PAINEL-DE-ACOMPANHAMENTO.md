@@ -30,6 +30,7 @@ Todos com **Regra Anti-Espera** e **Silêncio Zero**.
 
 | Item | Pacote | Status |
 |------|--------|--------|
+| **Auditar nós nativos do fluxo (CPF/CNPJ, salvar variável, vincular consumidor, atribuir categoria) e reconstruir o fluxo mestre com eles** | `implantacao/pacote-cowork-auditoria-nos-fluxo.md` | ⏳ **fazer antes dos demais** |
 | Atualizar os 11 agentes + testar | `implantacao/pacote-cowork-atualizacao-agentes.md` | ⏳ a executar |
 | IDs/chaves NeoAssist (destrava protocolo/WF) | `implantacao/pacote-cowork-neoassist-nativas.md` | ⏳ **P0** |
 | Integração Tray (I-04) | `implantacao/pacote-cowork-tray-a1.md` | ⏳ **P0** |
@@ -77,8 +78,9 @@ Documentação-base → pacote de implantação → marketplace → T9/silêncio
 
 ## 7. Próximos passos sugeridos (ordem)
 
-1. Cowork: **atualizar os 11 agentes + rodar os testes** (garante o comportamento anti-espera ao vivo).
-2. Cowork: **IDs/chaves NeoAssist** (P0) e **Tray** (P0).
-3. Definir **ERP/CRM da JL FIT** → gerar/rodar o pacote.
-4. Cowork: **construir o pipe financeiro do CX** no Pipefy.
-5. Trazer **materiais** (afiliados, FAQ terceirização) e **habilitar Workflow**.
+1. Cowork: **auditar os nós nativos do fluxo** (`pacote-cowork-auditoria-nos-fluxo.md`) — entrada dinâmica com validação CPF/CNPJ, salvar variável, vincular consumidor, atribuir categoria — e reconstruir o fluxo mestre com eles, antes de seguir para os demais itens.
+2. Cowork: **atualizar os 11 agentes + rodar os testes** (garante o comportamento anti-espera ao vivo).
+3. Cowork: **IDs/chaves NeoAssist** (P0) e **Tray** (P0).
+4. Definir **ERP/CRM da JL FIT** → gerar/rodar o pacote.
+5. Cowork: **auditar/completar o pipe financeiro do CX** no Pipefy (`307229758`) e integrar os field_ids de fato.
+6. Trazer **materiais** (afiliados, FAQ terceirização) e **habilitar Workflow**.

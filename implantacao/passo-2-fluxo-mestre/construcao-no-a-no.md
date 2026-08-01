@@ -1,6 +1,8 @@
 # Passo 2 — Fluxo mestre: construção nó a nó
 
 > Montar em: **Automações → novo fluxo → canal WhatsApp (11) 2388-3360 → gatilho: nova conversa**. Os textos abaixo são finais — colar como estão (substituindo os placeholders). Variáveis do fluxo estão em `{{chaves}}`.
+>
+> **Nota de arquitetura**: este documento descreve a lógica do fluxo em nós lógicos (N01, N02...), pensados para configuração manual. Ele **ainda não foi conferido contra o catálogo real de nós nativos do construtor de fluxo do NeoAssist** (ex.: entrada dinâmica com validação de CPF/CNPJ, salvar variável, vincular consumidor, atribuir categoria). Antes de montar este fluxo na plataforma, rodar primeiro `../pacote-cowork-auditoria-nos-fluxo.md` — ele audita os nós nativos disponíveis e indica onde substituir a lógica manual abaixo por um recurso nativo mais robusto. Este documento deve ser atualizado como fonte da verdade assim que essa auditoria voltar.
 
 ## Variáveis do fluxo
 
