@@ -1,6 +1,8 @@
 # Passo 2 — Fluxo mestre: construção nó a nó
 
 > Montar em: **Automações → novo fluxo → canal WhatsApp (11) 2388-3360 → gatilho: nova conversa**. Os textos abaixo são finais — colar como estão (substituindo os placeholders). Variáveis do fluxo estão em `{{chaves}}`.
+>
+> **Nota de arquitetura**: este documento descreve a lógica do fluxo em nós lógicos (N01, N02...), pensados para configuração manual. Ele **ainda não foi conferido contra o catálogo real de nós nativos do construtor de fluxo do NeoAssist** (ex.: entrada dinâmica com validação de CPF/CNPJ, salvar variável, vincular consumidor, atribuir categoria). Antes de montar este fluxo na plataforma, rodar primeiro `../pacote-cowork-auditoria-nos-fluxo.md` — ele audita os nós nativos disponíveis e indica onde substituir a lógica manual abaixo por um recurso nativo mais robusto. Este documento deve ser atualizado como fonte da verdade assim que essa auditoria voltar.
 
 ## Variáveis do fluxo
 
@@ -106,6 +108,26 @@ Lista interativa WhatsApp:
 ### N20 — Hand-off: agente Núb.ia Resolve do perfil
 Roteia para A1–A11 passando: `{{nome}}`, `{{documento}}`, `{{perfil}}`, `{{protocolo_recente}}`, resumo da triagem.
 
+**Importante (operacionalização de "Troca de perfil")**: cada agente (A1–A11) tem lógica integrada ao prompt para **detectar quando a demanda do cliente é fora do seu escopo**. Exemplos:
+- Cliente em A1 (Site FTW) diz "quero virar criador de conteúdo" → fora de A1, dentro de A9.
+- Cliente em A5 (B2B Farma SP) diz "na verdade preciso de um terceirizado para produzir comigo" → fora de A5, dentro de A10.
+
+Nesse caso, o agente reconhece e **sinaliza retorno ao fluxo mestre** com contexto "VOLTAR_AO_MENU_TRIAGEM" → vai para N22.
+
+### N22 — Reinício de triagem / oferecimento de continuidade (novo nó obrigatório)
+**Trigger**: conclusão natural de atendimento com agente OU detecção de assunto fora de escopo.
+
+Mensagem:
+> Ótimo! Já resolvi esse assunto para você. 😊
+>
+> Quer falar de algo novo ou tem mais alguma dúvida?
+
+Opções:
+1. **Sim, tenho outro assunto/dúvida** → volta a N15 (menu interativo de triagem — permite re-seleção de perfil)
+2. **Não, é só por agora** → pergunta de resolução (N21-like) + encerramento
+
+**Este nó é crítico**: garante que o cliente sempre recebe uma resposta (nunca silêncio) e pode mudar de assunto a qualquer momento sem perder o contexto.
+
 ### N21 — Opt-in de marketing (opcional; somente após atendimento bem resolvido)
 Oferecido **apenas** ao final de um atendimento resolvido (resposta positiva à pergunta de resolução), **nunca como pedágio** e no máximo 1 vez por período definido pela curadoria. Registrar via `[[INT_CONSENTIMENTO]]`: `optin_marketing = sim/nao` + data/hora + versão do aviso vigente.
 > Quer receber por aqui novidades e ofertas exclusivas da FTW? É opcional e você pode sair quando quiser. Responda: 1 para Sim, quero receber; 2 para Não, obrigado.
@@ -120,7 +142,22 @@ Opt-out a qualquer momento (SAIR ou equivalente): atualizar `optin_marketing = n
 - **Encerramento**: todo fim de conversa sem transbordo dispara a pergunta de resolução:
 > Antes de eu encerrar: a solução que te apresentei resolveu o problema?
   - Sim → agradecer e encerrar. Não → oferecer transbordo imediatamente.
-- **Troca de perfil no meio da conversa**: hand-off interno ao agente correto levando o resumo — o usuário não repete nada.
+- **Troca de perfil / assunto fora de escopo (NOVO)**: quando o cliente muda de tema ou o agente detecta demanda fora do escopo:
+  - Agente reconhece a mudança e sinaliza "VOLTAR_AO_MENU_TRIAGEM" para o fluxo mestre.
+  - Fluxo retorna a **N22** (reinício de triagem) com mensagem de transição.
+  - Cliente pode re-selecionar perfil correto em **N15** sem perder contexto ou protocolo.
+  - **Garantia**: nenhuma mudança de assunto deixa o cliente sem resposta — sempre há uma pergunta de continuidade.
+- **Mensagem de transbordo (padrão — três partes obrigatórias)**:
+  1. **Reconhecimento** (empatia): "Entendi, {{nome}}. Sinto muito por essa situação."
+  2. **Ação** (transparência de transferência): "Vou te passar agora para uma pessoa da nossa equipe que vai continuar ajudando você."
+  3. **Contexto** (garantia de não repetição): "Já deixei tudo registrado aqui: [resumo do caso + protocolo]. Você não vai precisar contar tudo de novo."
+  
+  **Fora do horário (9h–18h, seg–sex)**: adicionar: "Nosso time humano atende de segunda a sexta, das 9h às 18h. Já registrei tudo no protocolo {{protocolo}}. Assim que o atendimento abrir, alguém da equipe te retorna por aqui, até o fim do próximo dia útil."
+  
+  **Sem emojis em casos de reclamação, atraso ou reembolso** — manter tom profissional.
+
+- **Filas de destino (CRÍTICO — transbordos APENAS para filas filhas de 611808 FTW > Whatsapp)**: todos os transbordos devem ser roteados para as filas humanas **criadas e testadas na categoria pai 611808 FTW > Whatsapp** na NeoAssist. Validação obrigatória antes de cada transbordo (ver checklist passo 5). Filas válidas: Consumidor, Financeiro Consumidor, B2B Farma SP, B2B Nacional, CX Casos, Parcerias Profissionais, Marketing / Afiliados, Privacidade / DPO, Jurídico / Ouvidoria, Cobrança / Crédito, Terceirização, JL Educa, Trade Marketing. **Nenhum transbordo para fila fora dessa categoria — rejeita com validação em passo 5.**
+
 - **Identificação persistente**: identidade validada uma única vez (telefone, CPF ou CNPJ) fica gravada no cadastro (`{{identidade_validada}}`); em qualquer retorno, nenhum agente repete a identificação positiva — cumprimenta pelo nome e conduz. Confirmação adicional só em divergência de identidade ou operação sensível (documento 01, seção 6.1).
 - **Placeholders de integração**: os conectores são referenciados como `[[INT_*]]` (mapa no documento 03, seção 1.1); substituir pelos conectores reais conforme as documentações forem chegando.
 - **Sem resposta de integração (T9 — vale em qualquer nó e em todos os agentes)**: dado não localizado, integração indisponível ou cliente sem o dado em mãos → uma única tentativa de ajudar (onde encontrar o dado / busca por dado alternativo) e, sem sucesso, transbordo calmo e transparente com tudo o que já foi coletado. Nunca encerrar por falta de dado nem repetir a mesma coleta.

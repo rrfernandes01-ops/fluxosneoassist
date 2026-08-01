@@ -6,7 +6,9 @@ Pacotes de instruções para o **Claude Cowork** executar no ambiente do usuári
 
 | Pacote | O que faz |
 |--------|-----------|
-| [pacote-cowork-atualizacao-agentes.md](pacote-cowork-atualizacao-agentes.md) | Atualiza os 11 agentes e o artigo 02 na NeoAssist e roda os testes (Regra Anti-Espera) |
+| [pacote-cowork-prioridade-semana-diretoria.md](pacote-cowork-prioridade-semana-diretoria.md) | **Rodar esta semana, antes de qualquer outro** — versão enxuta e travada (11 agentes + N22 + transbordo em 3 partes + filas) para deixar o fluxo pronto para demonstração à Diretoria, sem a auditoria profunda de nós |
+| [pacote-cowork-auditoria-nos-fluxo.md](pacote-cowork-auditoria-nos-fluxo.md) | **Depois da apresentação** — audita todos os nós nativos do construtor de fluxo do NeoAssist (entrada dinâmica com validação CPF/CNPJ, salvar variável, vincular consumidor, atribuir categoria etc.), cruza com o fluxo mestre documentado e reconstrói usando os recursos nativos |
+| [pacote-cowork-atualizacao-agentes.md](pacote-cowork-atualizacao-agentes.md) | Versão completa de atualização dos 11 agentes + artigo 02 + bateria de testes (usar quando não houver pressa de tempo) |
 | [roteiro-de-testes-agentes.md](roteiro-de-testes-agentes.md) | Roteiro de testes dos fluxos por agente |
 
 ## Integrações (ordem de prioridade sugerida)

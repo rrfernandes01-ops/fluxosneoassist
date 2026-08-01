@@ -2,7 +2,9 @@
 
 > Processo transversal de tratamento de reclamações e solicitações que, além do relacionamento, exigem uma **decisão financeira** (prorrogação de boleto, isenção de frete, cancelamento, estorno, devolução total/parcial, bonificação, crédito, negociação).
 >
-> **Status de plataforma**: usa o **módulo Workflow (WF) da NeoAssist**, que **ainda não está habilitado** (previsão: próximas semanas). A documentação já deixa o processo pronto para configurar quando o WF for ativado. Integração com **Pipefy** para o painel de etapas do CX (placeholder `[[INT_PIPEFY_CX]]`, I-21).
+> **Status de plataforma**: usa o **módulo Workflow (WF) da NeoAssist**, que **ainda não está habilitado** (previsão: próximas semanas). A documentação já deixa o processo pronto para configurar quando o WF for ativado. Integração com **Pipefy** para o painel de etapas do CX (placeholder `[[INT_PIPEFY_CX]]`, I-21) — **pipe já criado**: "CX — Casos com Decisão Financeira", `https://app.pipefy.com/pipes/307274227` (field_ids a mapear pelo Cowork, conforme `../../implantacao/pacote-cowork-build-pipefy-cx.md`).
+>
+> **Objetivo de negócio**: liberar os representantes comerciais (A7) para vender — toda questão comercial de pós-venda (cancelamento, estorno, prorrogação de boleto, troca, devolução, negociação) é absorvida pelo CX através deste processo, seja ela levantada pelo representante em nome do cliente ou pelo próprio cliente B2B diretamente (A5/A6).
 
 ## 1. Problema que este processo resolve
 
@@ -66,6 +68,8 @@ O agente/CX conduz com perguntas abertas para chegar à origem do problema. O qu
 
 ### 4.3 Evidências (anexar quando houver)
 Print/registro de rastreio, comprovante de frete pago, e-mails/mensagens, protocolo da transportadora, foto do produto/carga, extrato de pedidos/sellout, histórico de relacionamento. Anexos entram no protocolo (`ChamadoAnexo`) e no card do Pipefy.
+
+**Evidência de pagamento (boleto) — só peça quando fizer sentido**: pedidos **B2B** são sempre faturados com boleto/título específico — peça número e vencimento sempre. Pedidos **B2C** (site, marketplace, PDV) são majoritariamente pagos por cartão ou Pix direto na compra — **não existe boleto na maioria dos casos**. Antes de pedir qualquer dado de boleto, confirme a forma de pagamento pela integração do ERP correspondente (Tray para B2C). Pedir boleto de uma compra em cartão é o tipo de fricção que este processo existe para eliminar.
 
 ### 4.4 Integrações reduzem perguntas (princípio — eleva o projeto)
 **Muito importante**: sempre que uma integração puder trazer o dado, o agente **não pergunta** — puxa automaticamente e apenas confirma. Isso vale para cliente e para representante. Exemplos:
