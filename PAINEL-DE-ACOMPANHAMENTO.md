@@ -82,5 +82,5 @@ Documentação-base → pacote de implantação → marketplace → T9/silêncio
 2. Cowork: **atualizar os 11 agentes + rodar os testes** (garante o comportamento anti-espera ao vivo).
 3. Cowork: **IDs/chaves NeoAssist** (P0) e **Tray** (P0).
 4. Definir **ERP/CRM da JL FIT** → gerar/rodar o pacote.
-5. Cowork: **auditar/completar o pipe financeiro do CX** no Pipefy (`307229758`) e integrar os field_ids de fato.
+5. Cowork: **auditar/completar o pipe financeiro do CX** no Pipefy (`307274227`) e integrar os field_ids de fato.
 6. Trazer **materiais** (afiliados, FAQ terceirização) e **habilitar Workflow**.
